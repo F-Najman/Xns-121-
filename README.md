@@ -90,3 +90,7 @@ unconditional.
 
 All the computations ran on the *Mordell* server, Department of Mathematics, University of Zagreb:
 AMD EPYC 9175F, 32 cores, 376 GB RAM, Magma V2.30-1.
+
+## Paper
+
+`paper/` mirrors the Overleaf project (6ae89a4fa80c0605cd016185); edit it there. The links in the paper point to revision 380321b of this repository.
