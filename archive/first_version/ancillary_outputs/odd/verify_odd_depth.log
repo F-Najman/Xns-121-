@@ -1,0 +1,37 @@
+Loading "outputs/retry/verify_genus5.m"
+Loading "outputs/verify_descent.m"
+alpha=x(2s)=z^4 - z^3 - 3*z^2 + 3*z + 2
+gamma=x(3s)-x(2s)=-2*z^4 + z^3 + 8*z^2 - 2*z - 4
+b = sum c_m a_m mod 11, c=[ 7, 10, 6 ]; unramified correction lambda=3
+Exact function-field identity verified.
+n=-2 delta=-5*z^4 + 4*z^3 + 18*z^2 - 15*z - 5
+  known point (w,Y)=(1,44*z^4 - 14*z^3 - 158*z^2 + 74*z + 35), genus=16
+n=-1 delta=-4*z^4 + 2*z^3 + 14*z^2 - 7*z - 5
+  known point (w,Y)=(1,-12*z^4 + 8*z^3 + 42*z^2 - 34*z - 5), genus=16
+n=0 delta=-2*z^4 + z^3 + 8*z^2 - 2*z - 4
+  known point (w,Y)=(1,-4*z^4 - 4*z^3 + 10*z^2 + 4*z - 7), genus=16
+n=1 delta=3*z^4 + 12*z^3 + 6*z^2 - 11*z - 3
+  known point (w,Y)=(1,76*z^4 + 206*z^3 + 42*z^2 - 166*z - 49), genus=16
+n=2 delta=-4*z^4 - 6*z^3 + 10*z^2 + 17*z + 5
+  known point (w,Y)=(1,36*z^4 + 72*z^3 - 86*z^2 - 198*z - 49), genus=16
+n=3 delta=10*z^4 - 11*z^3 - 24*z^2 + 18*z + 10
+  known point (w,Y)=(1,-232*z^4 + 184*z^3 + 526*z^2 - 232*z - 115), genus=16
+n=4 delta=1067*z^4 + 764*z^3 - 4486*z^2 - 1927*z + 3751
+  known point (w,Y)=(1,133836*z^4 + 95738*z^3 - 562590*z^2 - 241366*z + 470203), genus=16
+HYPERELLIPTIC_DESCENT_DONE
+n=-2 genus=5 eta=1 known_v=1/11*(4*z^4 + 4*z^3 - 8*z^2 - 16*z - 10)*theta^2 + 1/11*(2*z^4 + 4*z^3 - 14*z - 14)*theta + 1/11*(-6*z^4 - 25*z^3 - 15*z^2 + 103*z + 73)
+n=-1 genus=5 eta=-theta + 4 known_v=1/121*(-4*z^4 - 12*z^3 + 80*z^2 - 4*z - 152)*theta^2 + 1/121*(-12*z^4 - 14*z^3 + 108*z^2 + 10*z - 148)*theta + 1/121*(-20*z^4 + 94*z^3 - 282*z^2 - 108*z + 791)
+n=0 genus=5 eta=1 known_v=1/11*(-4*z^4 - 4*z^3 + 20*z^2 + 8*z - 22)*theta^2 + 1/11*(-2*z^4 - 4*z^3 + 14*z^2 + 12*z - 16)*theta + 1/11*(17*z^4 + 25*z^3 - 90*z^2 - 55*z + 108)
+n=1 genus=5 eta=-theta + 4 known_v=1/121*(-4*z^4 - 12*z^3 + 36*z^2 + 40*z - 64)*theta^2 + 1/121*(-12*z^4 - 58*z^3 - 2*z^2 + 98*z - 16)*theta + 1/121*(-20*z^4 + 28*z^3 - 106*z^2 - 196*z + 307)
+n=2 genus=5 eta=1 known_v=1/11*(4*z^4 - 12*z^2 + 4*z - 2)*theta^2 + 1/11*(2*z^4 - 8*z^3 - 12*z^2 + 24*z + 10)*theta + 1/11*(-28*z^4 - z^3 + 86*z^2 - 17*z + 3)
+n=3 genus=5 eta=-theta + 4 known_v=1/121*(40*z^4 - 12*z^3 - 140*z^2 + 84*z + 24)*theta^2 + 1/121*(54*z^4 + 30*z^3 - 200*z^2 - 34*z + 50)*theta + 1/121*(-262*z^4 + 160*z^3 + 840*z^2 - 614*z - 155)
+n=4 genus=5 eta=1 known_v=1/11*(20*z^4 + 12*z^3 - 80*z^2 - 24*z + 62)*theta^2 + 1/11*(-62*z^4 - 44*z^3 + 264*z^2 + 114*z - 226)*theta + 1/11*(-138*z^4 - 93*z^3 + 565*z^2 + 203*z - 451)
+ALL_SEVEN_c0_ARE_2_UNITS; valuation_at_unique_prime_above_2=2
+GENUS5_REDUCTION_VERIFIED; DESCENT_FIELD_DEGREES=30,60
+ODD_ELLIPTIC_DEPTH n=-1 v_K(x')=1 v_K(y')=1 v_K(delta)=2; v_K(w-1)=5k-3
+ODD_ELLIPTIC_DEPTH n=1 v_K(x')=1 v_K(y')=1 v_K(delta)=2; v_K(w-1)=5k-3
+ODD_ELLIPTIC_DEPTH n=3 v_K(x')=1 v_K(y')=1 v_K(delta)=2; v_K(w-1)=5k-3
+ODD_GLOBAL_SQUARE_ROOT_RATIO_VERIFIED n=-1 value_at_identity=1
+ODD_GLOBAL_SQUARE_ROOT_RATIO_VERIFIED n=1 value_at_identity=1
+ODD_GLOBAL_SQUARE_ROOT_RATIO_VERIFIED n=3 value_at_identity=1
+ODD_DEPTH_AND_BRANCH_INPUTS_VERIFIED

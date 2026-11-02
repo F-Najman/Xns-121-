@@ -1,0 +1,27 @@
+Loading "code/setup.m"
+SETUP_DONE
+DEPTH_EXAMPLE_PRECISION n0=-1 k=2 value=284 w=274 error_valuation=284
+LOCAL_DEPTH_EXAMPLE n0=-1 place=1 k=2 depth_X=28 divisions=13 direction=[ 1, 4, 9, 6, 3 ]
+DEPTH_EXAMPLE_PRECISION n0=-1 k=3 value=164 w=154 error_valuation=164
+LOCAL_DEPTH_EXAMPLE n0=-1 place=1 k=3 depth_X=48 divisions=23 direction=[ 1, 4, 9, 6, 3 ]
+DEPTH_EXAMPLE_PRECISION n0=1 k=2 value=284 w=274 error_valuation=284
+LOCAL_DEPTH_EXAMPLE n0=1 place=1 k=2 depth_X=28 divisions=13 direction=[ 1, 4, 9, 6, 3 ]
+DEPTH_EXAMPLE_PRECISION n0=1 k=3 value=164 w=154 error_valuation=164
+LOCAL_DEPTH_EXAMPLE n0=1 place=1 k=3 depth_X=48 divisions=23 direction=[ 1, 4, 9, 6, 3 ]
+DEPTH_EXAMPLE_PRECISION n0=3 k=2 value=364 w=354 error_valuation=364
+LOCAL_DEPTH_EXAMPLE n0=3 place=1 k=2 depth_X=28 divisions=13 direction=[ 1, 4, 9, 6, 3 ]
+DEPTH_EXAMPLE_PRECISION n0=3 k=3 value=294 w=284 error_valuation=294
+LOCAL_DEPTH_EXAMPLE n0=3 place=1 k=3 depth_X=48 divisions=23 direction=[ 1, 4, 9, 6, 3 ]
+DEPTH_EXAMPLE_PRECISION n0=-1 k=2 value=284 w=274 error_valuation=284
+LOCAL_DEPTH_EXAMPLE n0=-1 place=2 k=2 depth_X=28 divisions=13 direction=[ 1, 4, 9, 6, 3 ]
+DEPTH_EXAMPLE_PRECISION n0=-1 k=3 value=164 w=154 error_valuation=164
+LOCAL_DEPTH_EXAMPLE n0=-1 place=2 k=3 depth_X=48 divisions=23 direction=[ 1, 4, 9, 6, 3 ]
+DEPTH_EXAMPLE_PRECISION n0=1 k=2 value=284 w=274 error_valuation=284
+LOCAL_DEPTH_EXAMPLE n0=1 place=2 k=2 depth_X=28 divisions=13 direction=[ 1, 4, 9, 6, 3 ]
+DEPTH_EXAMPLE_PRECISION n0=1 k=3 value=164 w=154 error_valuation=164
+LOCAL_DEPTH_EXAMPLE n0=1 place=2 k=3 depth_X=48 divisions=23 direction=[ 1, 4, 9, 6, 3 ]
+DEPTH_EXAMPLE_PRECISION n0=3 k=2 value=364 w=354 error_valuation=364
+LOCAL_DEPTH_EXAMPLE n0=3 place=2 k=2 depth_X=28 divisions=13 direction=[ 1, 4, 9, 6, 3 ]
+DEPTH_EXAMPLE_PRECISION n0=3 k=3 value=294 w=284 error_valuation=294
+LOCAL_DEPTH_EXAMPLE n0=3 place=2 k=3 depth_X=48 divisions=23 direction=[ 1, 4, 9, 6, 3 ]
+ALL_ODD_LOCAL_DEPTH_EXAMPLES_VERIFIED

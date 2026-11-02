@@ -1,0 +1,7 @@
+{"prime": 353, "order_G": 11, "modulus": 11, "states": 7, "ranks": [[3, 3, 3]]}
+{"prime": 23, "order_G": 33, "modulus": 33, "states": 10, "ranks": [[3, 3, 3], [5, 5, 5]]}
+{"prime": 3301, "order_G": 33, "modulus": 33, "states": 7, "ranks": [[5, 5, 5]]}
+{"prime": 12101, "order_G": 1089, "modulus": 1089, "states": 12, "ranks": [[5, 5, 5]]}
+{"prime": 15731, "order_G": 726, "modulus": 2178, "states": 7, "ranks": [[5, 5, 5]]}
+{"prime": 53, "order_G": 12, "modulus": 4356, "states": 7, "ranks": [[5, 5, 5]]}
+SIX_PRIME_SIEVE_VERIFIED modulus=4356 states=7 CM_classes_match=true

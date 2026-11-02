@@ -1,0 +1,19 @@
+alpha=x(2s)=z^4 - z^3 - 3*z^2 + 3*z + 2
+gamma=x(3s)-x(2s)=-2*z^4 + z^3 + 8*z^2 - 2*z - 4
+b = sum c_m a_m mod 11, c=[ 7, 10, 6 ]; unramified correction lambda=3
+Exact function-field identity verified.
+n=-2 delta=-5*z^4 + 4*z^3 + 18*z^2 - 15*z - 5
+  known point (w,Y)=(1,44*z^4 - 14*z^3 - 158*z^2 + 74*z + 35), genus=16
+n=-1 delta=-4*z^4 + 2*z^3 + 14*z^2 - 7*z - 5
+  known point (w,Y)=(1,-12*z^4 + 8*z^3 + 42*z^2 - 34*z - 5), genus=16
+n=0 delta=-2*z^4 + z^3 + 8*z^2 - 2*z - 4
+  known point (w,Y)=(1,-4*z^4 - 4*z^3 + 10*z^2 + 4*z - 7), genus=16
+n=1 delta=3*z^4 + 12*z^3 + 6*z^2 - 11*z - 3
+  known point (w,Y)=(1,76*z^4 + 206*z^3 + 42*z^2 - 166*z - 49), genus=16
+n=2 delta=-4*z^4 - 6*z^3 + 10*z^2 + 17*z + 5
+  known point (w,Y)=(1,36*z^4 + 72*z^3 - 86*z^2 - 198*z - 49), genus=16
+n=3 delta=10*z^4 - 11*z^3 - 24*z^2 + 18*z + 10
+  known point (w,Y)=(1,-232*z^4 + 184*z^3 + 526*z^2 - 232*z - 115), genus=16
+n=4 delta=1067*z^4 + 764*z^3 - 4486*z^2 - 1927*z + 3751
+  known point (w,Y)=(1,133836*z^4 + 95738*z^3 - 562590*z^2 - 241366*z + 470203), genus=16
+HYPERELLIPTIC_DESCENT_DONE

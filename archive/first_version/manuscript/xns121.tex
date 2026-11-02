@@ -1,0 +1,948 @@
+\documentclass[11pt,reqno]{amsart}
+\usepackage[a4paper,margin=29mm]{geometry}
+\usepackage{amssymb,mathtools,booktabs,longtable}
+\usepackage[colorlinks=true,linkcolor=blue,citecolor=blue,urlcolor=blue]{hyperref}
+\newcommand{\Q}{\mathbb Q}\newcommand{\Z}{\mathbb Z}
+\newcommand{\F}{\mathbb F}\newcommand{\OO}{\mathcal O}
+\newcommand{\ns}{\mathrm{ns}}\newcommand{\GL}{\operatorname{GL}}
+\newcommand{\Gal}{\operatorname{Gal}}\newcommand{\End}{\operatorname{End}}
+\newcommand{\Jac}{\operatorname{Jac}}\newcommand{\Sel}{\operatorname{Sel}}
+\newcommand{\Cl}{\operatorname{Cl}}\newcommand{\Tr}{\operatorname{Tr}}
+\newcommand{\rank}{\operatorname{rank}}\newcommand{\Lie}{\operatorname{Lie}}
+\newcommand{\disc}{\operatorname{disc}}\newcommand{\im}{\operatorname{im}}
+\newcommand{\Xns}[1]{X_{\ns}^{+}(#1)}
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{corollary}[theorem]{Corollary}
+\theoremstyle{definition}\newtheorem{definition}[theorem]{Definition}
+\theoremstyle{remark}\newtheorem{remark}[theorem]{Remark}
+\numberwithin{equation}{section}
+\emergencystretch=3em
+\title[Rational points on the non-split Cartan curve of level 121]{Rational points on the non-split Cartan modular curve of level 121}
+\author{Filip Najman}
+\date{November 2, 2026}
+\subjclass[2020]{11G18, 14G05, 11F80, 11G05}
+\keywords{Modular curves, Galois representations, Selmer groups, isogeny descent}
+\begin{document}
+\begin{abstract}
+We determine the rational points on the non-split Cartan modular curve
+\(\Xns{121}\). It has exactly seven rational points, all of which are
+CM. This completes the classification of the \(11\)-adic Galois images
+of non-CM elliptic curves over \(\Q\). A cusp descent reduces the
+problem to seven curves of genus five over a number field. We determine
+their relevant points by an isogeny descent and Selmer-group Chabauty.
+The proof uses a local formal-division calculation at points with
+singular reduction and does not assume the generalized Riemann hypothesis.
+\end{abstract}
+\maketitle
+\section{Introduction}
+
+Let \(C_{\ns}(121)\) be a non-split Cartan subgroup of
+\(\GL_2(\Z/121\Z)\), obtained from an unramified quadratic algebra,
+and let \(N_{\ns}(121)\) be its normalizer. We write
+\(\Xns{121}\) for the corresponding modular curve. It has genus
+511 and parametrizes elliptic curves with a non-split Cartan
+structure of level 121, modulo the normalizer.
+
+Rouse, Sutherland and Zureick-Brown classified the possible
+\(11\)-adic Galois images of non-CM elliptic curves over \(\Q\),
+apart from the images contained in the inverse image of
+\(N_{\ns}(121)\) \cite[Theorem 1.6]{RSZB}. The remaining case is
+equivalent to determining whether \(\Xns{121}\) has a non-CM
+rational point. The natural map
+\[
+ \Xns{121}\longrightarrow\Xns{11}
+\]
+has degree 121. The target is an elliptic curve of rank one.
+Schoof and Tzanakis determined its rational points with integral
+\(j\)-invariant \cite{ST}. However, that result does not exclude
+points with nonintegral \(j\)-invariant coming from level 121.
+
+In this paper we determine all rational points on \(\Xns{121}\).
+The main result is the following theorem.
+
+\begin{theorem}\label{thm:main}
+The curve \(\Xns{121}\) has exactly seven rational points. They
+are CM points with discriminants
+\[
+ -3,\ -4,\ -12,\ -16,\ -27,\ -67,\ -163.
+\]
+There is exactly one point for each discriminant. There are no
+rational cusps and no non-CM rational points.
+\end{theorem}
+
+For an elliptic curve \(A/\Q\), write
+\(\rho_{A,11^\infty}:G_\Q\to\GL_2(\Z_{11})\) for the action on
+its Tate module and \(\rho_{A,121}\) for its reduction modulo 121.
+We obtain the following consequence.
+
+\begin{corollary}\label{cor:images}
+Let \(A/\Q\) be a non-CM elliptic curve. Then
+\(\rho_{A,121}(G_\Q)\) is not contained in a conjugate of
+\(N_{\ns}(121)\). In particular, the classification of
+\(11\)-adic Galois images of non-CM elliptic curves over \(\Q\)
+is complete.
+\end{corollary}
+\begin{proof}
+Such a containment would give a non-CM rational point on
+\(\Xns{121}\), contrary to Theorem~\ref{thm:main}. The last
+assertion follows from \cite[Theorem 1.6]{RSZB}.
+\end{proof}
+
+We prove Theorem~\ref{thm:main} by working with the image on
+\(\Xns{11}\). A cusp descent and a sieve at six primes leave
+seven possibilities for the descent classes, together with a
+congruence modulo \(4356\). Each class is represented by a known
+CM point. A further two-descent gives seven auxiliary curves of
+genus five over a number field of degree 15. We retain the
+condition that their points arise from rational points on
+\(\Xns{11}\).
+
+We then apply the isogeny version of Selmer-group Chabauty
+\cite[Theorem 2.1 and Remark 2.2]{Stoll}. We compute the relevant
+Selmer groups after adjoining \(\zeta_{11}\) and compare their
+localizations at 11 with images obtained by repeated formal
+division. While a point remains sufficiently deep in the formal
+group, injectivity of Selmer localization forces a global
+division. The final local image is incompatible with the computed
+Selmer image, which excludes an additional rational point.
+
+The local calculation is different in the odd and even classes.
+In the even classes the known point has smooth reduction. In the
+odd classes it reduces to the singular point of the integral
+model, and we work over ramified quadratic completions. We give
+the formal-group calculation in both cases. The descent requires
+neither a basis of the Mordell-Weil groups of the auxiliary
+Jacobians nor a height bound for the image on \(\Xns{11}\).
+
+The number-field computations use an unconditional discriminant
+bound to certify the required class-group input. GRH is used only
+to find candidate generators, which are then certified by exact
+membership and local independence. Thus Theorem~\ref{thm:main}
+does not depend on GRH.
+
+\subsection{Notation}
+For a number field \(k\), a finite set \(S\) of finite primes and
+a prime \(p\), put
+\[
+ k(S,p)=\{a\in k^\times/k^{\times p}:
+ v_\mathfrak q(a)\equiv0\pmod p\text{ for }\mathfrak q\notin S\}.
+\]
+We use additive notation for this \(\F_p\)-vector space.
+Valuations on local fields are normalized to have value group
+\(\Z\). If \(\lambda\) is an isogeny, \(\mu_v\) denotes its
+local Kummer map.
+
+\subsection{The CM points}
+For each discriminant in Theorem~\ref{thm:main}, the CM order
+has class number one and 11 is inert. Its action on the torsion
+gives a rational point on \(\Xns{121}\). The corresponding
+\(j\)-invariants and the images on \(\Xns{11}\) are listed in
+Table~\ref{tab:121}.
+
+We shall use uniqueness of the rational CM lift from level 11.
+Lifts of a fixed Cartan algebra modulo 11 form an affine space
+whose translation space has dimension two over \(\F_{11}\).
+The canonical CM lift is the origin. The Cartan acts on the
+translation space through the norm-one subgroup of
+\(\F_{121}^\times\), which has order 12 and acts freely away from
+the origin. Modulo elliptic automorphisms, the nonzero orbit
+lengths are 12, 6 or 4. CM reciprocity gives this action, so
+only the canonical lift is rational. The finite orbit calculation
+is included in the ancillary data.
+
+\section{Cusp descent and the auxiliary curves}\label{sec:121}
+
+The natural map \(\Xns{121}\to\Xns{11}\) has degree 121.
+We use the model
+\begin{equation}\label{eq:E11}
+ E=\Xns{11}:\quad y^2+y=x^3-x^2-7x+10,\qquad
+ E(\Q)=\Z G,\quad G=(4,5).
+\end{equation}
+The model and Mordell--Weil generator agree with \cite{ST}.
+The seven known points at level 121 map to the following points.
+\begin{table}[ht]\centering
+\begin{tabular}{rllr}\toprule
+\(n\)&\(nG\)&\(D\)&\(j\)\\\midrule
+\(-2\)&\((2,-1)\)&\(-27\)&\(-12288000\)\\
+\(-1\)&\((4,-6)\)&\(-16\)&\(287496\)\\
+\(0\)&\(O\)&\(-12\)&\(54000\)\\
+\(1\)&\((4,5)\)&\(-67\)&\(-147197952000\)\\
+\(2\)&\((2,0)\)&\(-4\)&\(1728\)\\
+\(3\)&\((5/4,7/8)\)&\(-3\)&\(0\)\\
+\(4\)&\((-2,3)\)&\(-163\)&\(-262537412640768000\)\\\bottomrule
+\end{tabular}
+\caption{The images of the rational points on \(\Xns{121}\).}\label{tab:121}
+\end{table}
+
+\subsection{The finite sieve}
+
+Put \(K=\Q(z)\), where
+\[
+ z^5+z^4-4z^3-3z^2+3z+1=0,
+ \qquad u=2-z.
+\]
+The unique prime above 11 is generated by \(u\). The five cusps are
+\(r_i s\), with
+\[
+ (r_i)=(1,4,3,9,5),\qquad
+ s=(-z^4-z^3+2z^2+3z+3,-2z^4-4z^3+6z^2+11z+1).
+\]
+The point \(s\) has order 11. The cusp divisor is a single closed
+point of degree five, so \(E\) has no rational cusps.
+
+Suppose a rational point at level 121 maps to \(P=nG\). At any prime
+away from 11 at which \(j(P)\) is nonintegral, its valuation is divisible
+by 121. Indeed, after a quadratic twist the associated elliptic curve
+is a Tate curve. A nontrivial unipotent inertia element modulo 121
+cannot belong to the normalizer of an unramified Cartan: this holds
+modulo 11, and an element \(1+11N\), with \(N\) nonzero nilpotent
+modulo 11, cannot belong to the Cartan congruence kernel either.
+Hence the Tate parameter has valuation divisible by 121.
+As the polar multiplicity of \(j\) at each cusp of \(E\) is 11, the
+intersection multiplicities of \(P\) with the cusps are divisible by 11
+away from 11.
+
+For \(m=1,2,3\), let \(a_{m,i}\) be the representative in
+\(\{1,\ldots,10\}\) of \(r_i^m\bmod11\), and choose \(f_m\) with
+\[
+ \operatorname{div}(f_m)=\sum_i a_{m,i}(r_i s)-22(O),
+ \qquad \left.f_m(x/y)^{22}\right|_O=1.
+\]
+The class of \(f_m(P)\) lies in \(K(S,11)\), where
+\(S=\{(u)\}\). The class number of \(K\) is one. A basis for this
+five-dimensional space is
+\[
+ u,\quad z^4-3z^2+1,\quad z^2+z-1,\quad z,
+ \quad -z^4-z^3+3z^2+3z.
+\]
+At \(O\) one uses the normalized leading coefficient. 
+
+The sieve starts with all three classes unknown. Local residue-symbol
+equations, with cusp residues retained conservatively, give:
+\begin{center}\begin{tabular}{rrrrl}\toprule
+prime&order of \(\bar G\)&modulus&states&ranks of each class system\\\midrule
+353&11&11&7&3\\
+23&33&33&10&3 or 5\\
+3301&33&33&7&5\\
+12101&1089&1089&12&5\\
+15731&726&2178&7&5\\
+53&12&4356&7&5\\\bottomrule
+\end{tabular}\end{center}
+Write \(M=4356=4\cdot9\cdot121\). The final states are exactly
+\begin{equation}\label{eq:sieve}
+ n\equiv n_0\pmod{4356},\qquad -2\le n_0\le4,
+ \qquad [f_m(nG)]=[f_m(n_0G)]\quad(m=1,2,3).
+\end{equation}
+We compute all six local tables from the functions above.
+The ancillary program \texttt{six\_prime\_sieve.py} performs the exhaustive affine
+linear algebra and congruence lifting.
+We compute the classes of the seven known points exactly in the displayed
+unit basis and verify that they are the surviving classes.
+
+Set
+\[
+ \alpha=x(2s)=z^4-z^3-3z^2+3z+2,\qquad
+ \delta_{n_0}=x(n_0G-3s)-\alpha.
+\]
+There is an exact normalized function identity
+\[
+ \frac{x(P-3s)-\alpha}{x(3s)-\alpha}
+   = f_1(P)^7 f_2(P)^{10} f_3(P)^6 f_T(P)^3 h(P)^{11},
+\]
+where \(h\in K(E)^\times\) and
+\[
+ \operatorname{div}(f_T)=11(s)-11(O),\qquad
+ \left.f_T(x/y)^{11}\right|_O=1.
+\]
+We verify the identity, including its constant, in the function field
+of \(E\). The class of \(f_T(P)\) is an
+unramified descent homomorphism on \(E(K)/11E(K)\).
+It follows from \eqref{eq:sieve} that
+\begin{equation}\label{eq:cusp}
+ x(nG-3s)=\alpha+\delta_{n_0}w^{11},\qquad w\in K.
+\end{equation}
+
+Let
+\[
+ L=K(\theta),\quad \theta^3-\theta^2-7\theta+41/4=0,
+ \qquad \beta^2=\alpha-\theta,\quad \beta\in L,
+ \qquad F=L(\zeta_{11}).
+\]
+The degrees of \(L,F\) are 15 and 30. The two-descent map \(x-\theta\)
+on \(E(L)\) shows that \eqref{eq:cusp} gives a point on
+\begin{equation}\label{eq:genus5}
+ \eta v^2=\alpha-\theta+\delta_{n_0}w^{11},\qquad
+ \eta=\begin{cases}1&n_0\text{ even},\\4-\theta&n_0\text{ odd}.
+ \end{cases}
+\end{equation}
+Indeed, \(-3s\) is twice a point and \(n\equiv n_0\bmod2\).
+Put \(a=\delta_{n_0}/\beta^2\) and \(b=a^5\). The ideal of \(a\)
+in \(F\) is the square of its unique prime over 2. In particular it
+is a unit at 11. Over \(B=F(\sqrt\eta)\), the substitutions
+\[
+ X=aw,\qquad Y=\sqrt\eta\,a^5v/\beta
+\]
+give the unit model
+\begin{equation}\label{eq:unit}
+ C:\quad Y^2=X^{11}+b^2.
+\end{equation}
+Its known point \(P_0\) has \(X=a\). We write \(J\) for its Jacobian and \(J^\eta\) for its
+quadratic twist. In an even case \(\eta=1\). We choose the known
+square root \(v_0\in L\) compatibly with the original elliptic point,
+and write \(P_0\) for the resulting point with \(w=1\).
+
+
+\subsection{The odd Selmer groups}
+
+We first consider \(n_0=-1,1,3\) and \(\eta=4-\theta\). Let
+\(\tau\) generate \(\operatorname{Gal}(B/F)\). The twist identifies
+\(J^\eta(F)\) with the anti-invariant subgroup of \(J(B)\).
+The endomorphisms
+\[
+ \sigma(X,Y)=(\zeta_{11}X,Y),\qquad \lambda=1-\sigma
+\]
+commute with twisting. The kernel of \(\lambda\) on \(J\) is generated
+by \(T=[(0,b)-\infty]\), which has order 11. The action of \(\tau\)
+on \(T\) is trivial, so \(J^\eta[\lambda](F)=0\).
+The Kummer map is represented over \(B\) by \(Y-b\). Its values
+lie in the anti-invariant part of \(B^\times/B^{\times11}\).
+
+The exact discriminants are
+\[
+ |\operatorname{disc}F|=2^{20}11^{27},\qquad
+ |\operatorname{disc}B|=2^{60}11^{56}.
+\]
+Both fields have root discriminant less than 19. The row \(b=9\) of
+Odlyzko's unconditional Table 4 \cite{Od} gives
+\[
+ |D_M|>53.047^{r_1}20.710^{2r_2}e^{-24.001}.
+\]
+For any number field of degree \(d\ge330\), this implies
+\[
+ |D_M|^{1/d}>20.710\,e^{-24.001/330}
+ >20.710\left(1-\frac{24.001}{330}\right)>19.
+\]
+An everywhere unramified cyclic extension of degree 11 of \(F\) or
+\(B\) would have degree at least 330 and the same root discriminant.
+Thus
+\begin{equation}\label{eq:classes}
+ \Cl(F)[11]=\Cl(B)[11]=0.
+\end{equation}
+We verify the discriminants and the displayed rational inequality
+exactly. Odlyzko rounds the lower bounds down and the error constant
+up, as explained in \cite{OdDescription}.
+
+Let \(S\) consist of the primes over 2 and 11. Each of \(F\) and \(B\)
+has four such primes. Their unit ranks are 14 and 29, and both contain
+\(\mu_{11}\). It follows from \eqref{eq:classes} that
+\[
+ \dim F(S,11)=19,\qquad \dim B(S,11)=34.
+\]
+Norm is onto, since norm composed with restriction is multiplication by
+2. Thus the anti-invariant global Kummer space has dimension 15.
+
+We construct this space using candidate generators from the
+degree-30 fields
+\[
+ L(\sqrt{4-\theta}),\qquad L(\sqrt{-11(4-\theta)}).
+\]
+For each candidate we check the ideal valuations outside \(S\),
+map it into \(B\) and divide it by its conjugate. The resulting
+element has norm one. We obtain fifteen independent joint local
+images. Since the global space has dimension 15, these classes form
+a basis. GRH is used to find candidates, but the membership and
+independence checks certify the basis without that assumption.
+
+There are three primes \(v\mid11\) of \(F\), all with
+\(F_v\simeq\Q_{11}(\zeta_{11})\). At two of them, denoted \(v_1,v_2\),
+\(B/F\) is ramified quadratic. At the third it is unramified quadratic.
+It is nonsplit at all three, so \(J^\eta[\lambda](F_v)=0\).
+The determinant of \(\lambda\) on the tangent space has valuation five
+in \(F_v\), and hence
+\[
+ \dim_{\F_{11}} J^\eta(F_v)/\lambda J^\eta(F_v)=5.
+\]
+We generate each local image using anti-invariant divisors
+\(6(P-\tau P)\), with \(P\in C(B_v)\), until its dimension is five.
+Divisors of degree two are needed to obtain the full local image.
+
+Let \(\mathcal S^+\) be the intersection of the certified global
+15-dimensional space with these three local images. Omitting the
+condition at 2 makes this a Selmer upper bound, which suffices. We compute that
+\begin{equation}\label{eq:selmer}
+ \dim\mathcal S^+=1\quad(n_0=-1,1,3),\qquad
+ \mathcal S^+\longrightarrow
+ \prod_{i=1}^2 B_{v_i}^\times/B_{v_i}^{\times11}
+ \text{ is injective}.
+\end{equation}
+The known point has a nonzero class in each of these lines. Thus the
+actual Selmer group and \(J^\eta(F)/\lambda J^\eta(F)\) both have
+dimension one. Since the rational \(\lambda\)-torsion is zero and
+\(\lambda\) has cyclotomic norm 11, this forces rank ten over \(F\).
+The nontrivial automorphism of \(F/L\) conjugates the cyclotomic
+action, so its fixed subspace has half this dimension. Hence the corresponding
+Jacobian has rank exactly five over \(L\).
+The rational-point argument below does not use this rank assertion.
+
+
+\section{Local division}\label{sec:local}
+
+We first describe the formal group of the unit model \eqref{eq:unit}.
+At a place \(v\) over 11, put \(k=F_v\) and let \(l\) be either \(k\) in an even case
+or a ramified quadratic completion \(B_v\) in an odd case.
+Put \(\pi=1-\zeta_{11}\) and \(e=v_l(\pi)\in\{1,2\}\).
+Thus \(v_l(11)=10e\). For \(e=1\) use \(\varpi=\pi\).
+For \(e=2\) we use
+\[
+ \varpi=\frac{\sqrt\eta}{\pi^2},\qquad
+ v_l(\varpi)=1,\qquad \tau\varpi=-\varpi.
+\]
+In either case the residue field is \(\F_{11}\).
+
+We use the proper hyperelliptic model of \eqref{eq:unit}. Its special
+fibre is geometrically integral, with a single cusp and a smooth point
+at infinity. The formal completion at the identity of its relative
+Picard group is a smooth formal group of dimension five, since the
+obstruction group \(H^2(\mathcal O)\) vanishes on each fibre. We may
+construct its formal coordinates from sums of Abel maps at five smooth
+sections with distinct residual \(X\)-coordinates. The cotangent lattice
+has basis
+\[
+ \omega_j=\frac{X^{j-1}\,dX}{2Y},\qquad 1\le j\le5.
+\]
+Write \(H_m\) for formal points whose coordinates lie in
+\(\varpi^m\OO_l\).
+
+\begin{lemma}\label{lem:log}
+The formal logarithm and exponential have integral coefficients in
+these integral coordinates. Moreover,
+\[
+ \lambda:H_m\xrightarrow{\sim}H_{m+e}\qquad(m\ge1).
+\]
+In logarithm coordinates dual to the \(\omega_j\), the action of
+\(\lambda\) is diagonal with entries \(1-\zeta_{11}^j\).
+\end{lemma}
+\begin{proof}
+The automorphism \(\sigma\) is the identity on the model modulo the
+ideal \((\pi)\), including its nonreduced base change to
+\(\OO_l/(\pi)\). Hence every coefficient of the formal power series
+for \(1-\sigma\) is divisible by \(\pi\). Its linear part divided by
+\(\pi\) is invertible, since
+\((1-\zeta_{11}^j)/\pi\equiv j\pmod\varpi\).
+Dividing the series by \(\pi\) and applying the formal inverse
+function theorem proves the asserted isomorphism.
+
+The norm correspondence \(1+\sigma+\cdots+\sigma^{10}\) is zero on
+the Jacobian, since the quotient curve has genus zero. In
+\(\Z[\sigma]\), multiplication by 11 is therefore a unit times
+\(\lambda^{10}\). Every coefficient of its formal series is divisible
+by \(\pi^{10}\), and hence by 11.
+The logarithm identity
+\(\log([11]t)=11\log(t)\) now proves integrality by induction on total
+degree. In degree \(d\ge2\), the unknown coefficient is multiplied
+by \(11^d-11\), whose quotient by 11 is a unit. The already known
+terms are all divisible by 11. The inverse series is integral as well.
+Finally \(\sigma^*\omega_j=\zeta_{11}^j\omega_j\), which gives the
+diagonal action.
+\end{proof}
+
+\subsection{An odd residue disc}
+In this subsection \(e=2\), so \(v_l(11)=20\).
+Write \(f(X)=X^{11}+b^2\).
+\begin{lemma}\label{lem:singulardisc}
+Suppose \(P_0=(a,Y_0)\), \(v_l(Y_0)=1\), and \(\bar a=-1\).
+If \(P=(a+t,Y(t))\) is on the branch through \(P_0\) and
+\(d=v_l(t)\ge28\), then
+\[
+ [P-P_0]\in H_{d-1}\setminus H_d,
+ \qquad
+ \log[P-P_0]=\frac{t}{2Y_0}(1,a,a^2,a^3,a^4)
+                  \pmod{\varpi^d}.
+\]
+\end{lemma}
+\begin{proof}
+Expand the five differentials in the parameter \(t\), on the analytic
+branch through \(P_0\). The coefficient of \(t^h\) has valuation at
+least \(-2h-1\): use
+\(Y(t)^{-1}=Y_0^{-1}(1+(f(a+t)-f(a))/Y_0^2)^{-1/2}\), whose binomial
+coefficients are 11-integral. Upon integration, a term with \(h\ge1\)
+has valuation at least
+\[
+ (h+1)d-2h-1-20v_{11}(h+1)>d-1.
+\]
+Thus the five integrals lie in \(\varpi^{d-1}\OO_l\), and their
+leading terms are as asserted. Lemma~\ref{lem:log} allows their
+exponential in the formal Picard group. This analytic map and the Abel
+map have identical differentials and agree at \(P_0\). Hence they
+agree on the disc. The first leading coordinate is nonzero, proving the exact
+depth. Note that \(P_0\) need not reduce to a smooth point of the model.
+\end{proof}
+
+Write \(H_m^-\) for the anti-invariant subgroup under \(\tau\).
+For these subgroups one further has
+\begin{equation}\label{eq:H2}
+ H_2^- = H_3^-,\qquad \mu_v(H_2^-)=0.
+\end{equation}
+Indeed, \(\tau\) acts trivially on \(H_2/H_3\), because it fixes the
+residue field and sends \(\varpi\) to \(-\varpi\). On an
+anti-invariant point it acts by \(-1\). Since 2 is invertible, such a
+point is in \(H_3\). The unique formal \(\lambda\)-division in
+Lemma~\ref{lem:log} is again anti-invariant. In particular, the local
+Kummer class of a point in \(H_1^-\) depends only on its leading
+tangent vector in \(H_1/H_2\).
+
+\subsection{The odd rational-image locus}
+Suppose \(n\ne n_0\), with \(n\equiv n_0\bmod4356\), and write
+\(k_0=v_{11}(n-n_0)\ge2\). Over the completion of \(K\), normalize
+\(v_K(u)=1\). The integral minimal elliptic model is
+\[
+ x'=(x-4)/u^2,\quad y'=(y+1/2)/u^3,\qquad
+ (y')^2=(x')^3+\frac{11}{u^2}(x')^2+
+           \frac{33}{u^4}x'+\frac{121}{4u^6}.
+\]
+Its discriminant has valuation three. The formal parameter of \(2G\)
+is \(-x'/y'=4u\). The elliptic formal logarithm is an isometry on
+this formal neighbourhood, since \(1>v_K(11)/10=1/2\). Thus
+\[
+ v_K(t'((n-n_0)G))=1+5k_0.
+\]
+For each odd \(n_0\), put \(q_0=n_0G-3s\). Exact calculations give
+\[
+ v_K(x'(q_0))=v_K(y'(q_0))=1,\qquad v_K(\delta_{n_0})=2.
+\]
+The first term in the formal translation of \(x'\) is a unit times
+\(2y'(q_0)t'\). Higher terms have larger valuation. Thus
+\[
+ v_K(x(nG-3s)-x(q_0))=4+5k_0,
+\]
+and \eqref{eq:cusp} gives
+\begin{equation}\label{eq:odddepth}
+ v_K(w-1)=5k_0-3,\qquad
+ v_{F_v}(X-a)=10k_0-6,\qquad
+ v_l(X-a)=20k_0-12.
+\end{equation}
+Here \(\bar w=1\), and the term \(11(w-1)\) uniquely determines the
+valuation of \(w^{11}-1\).
+One also checks \(\bar a=-1\) and \(v_l(Y_0)=1\) at the ramified
+places. These are the inputs to Lemma~\ref{lem:singulardisc}.
+
+It remains to select a single global square root whose signs agree
+with \(P_0\) at both places. Let
+\[
+ R=((n-n_0)/2)G,\qquad Q=2R,\qquad
+ h_\theta(R)=\frac{(x(R)-\theta)^2-(3\theta^2-2\theta-7)}{2y(R)+1}.
+\]
+Then \(h_\theta(R)^2=x(Q)-\theta\). If
+\(m=(y(Q)-y(q_0))/(x(Q)-x(q_0))\), set
+\[
+ \rho(R)=
+ -\frac{m(\theta-x(q_0))+y(q_0)+1/2}
+          {(x(q_0)-\theta)h_\theta(R)}.
+\]
+The exact function-field identities are
+\[
+ \rho(R)^2=\frac{x(q_0+2R)-\theta}{x(q_0)-\theta},
+ \qquad \rho(O)=1.
+\]
+Choose \(v=v_0\rho(R)\), where \(v_0\) is the known square root in
+\eqref{eq:genus5}. This gives the required global choice.
+Since \(4\mid n-n_0\), the point \(R\) is formal. Its original elliptic
+parameter has \(F_v\)-valuation at least 20, while
+\(v_{F_v}(x(q_0)-\theta)\le6\).
+The expansion of \(\rho\) at \(O\) therefore has \(\rho(R)-1\) of
+positive valuation (in fact at least 14). It chooses the branch through
+\(P_0\) simultaneously. We verify the square identity in the elliptic function field.
+The value at \(O\) and all the displayed valuations are checked exactly.
+
+Let \(D=[P-P_0]\in J^\eta(F)\). By
+Lemma~\ref{lem:singulardisc}, its depth at each ramified place is
+\(20k_0-13\). After
+\begin{equation}\label{eq:divisions}
+ r=10k_0-7\equiv3\pmod{10}
+\end{equation}
+formal divisions by \(\lambda\), its depth is one. Up to a nonzero
+scalar at each place, its leading tangent vector is
+\begin{equation}\label{eq:direction}
+ \mathbf d=
+ \left(1,-\frac1{2^3},\frac1{3^3},-\frac1{4^3},\frac1{5^3}\right)
+ =(1,4,9,6,3)\in\F_{11}^5.
+\end{equation}
+This follows from the diagonal action in Lemma~\ref{lem:log} and
+\(\bar a=-1\). The exponent three is essential: the odd elliptic
+point has \(v_K(y')=1\), unlike the even cases.
+
+\subsection{The final odd directions}
+Here is an explicit computation of the Kummer image of
+\eqref{eq:direction}. Choose smooth points with residual
+\(X\)-coordinates \(r_i=0,2,3,4,8\) and square roots \(y_i\in k\).
+At zero take \(y_i=-b\). The tangent matrix of the five Abel maps is
+\[
+ M_{ij}=\frac{r_i^{j-1}}{2\bar y_i}.
+\]
+It is invertible. Solve \(\mathbf uM=\mathbf d\) over \(\F_{11}\)
+and lift the \(u_i\) to integers. Let
+\[
+ P_i^\pm=(r_i\pm\varpi u_i,y_i^\pm),
+ \qquad y_i^\pm\equiv y_i\pmod\varpi.
+\]
+The anti-invariant formal divisor
+\(6\sum_i(P_i^+-P_i^-)\) has leading tangent vector \(\mathbf d\),
+because \(12\equiv1\bmod11\). Its Kummer image is therefore
+\begin{equation}\label{eq:muformula}
+ d_v=6\sum_i\bigl(\mu_v(y_i^+-b)-\mu_v(y_i^--b)\bigr).
+\end{equation}
+By \eqref{eq:H2}, this is the image of every anti-invariant formal
+point with that leading tangent vector. The calculations check
+\(d_v\ne0\) and membership in the full local image.
+
+Let \(\mathcal S_R^+\) be the restriction of \(\mathcal S^+\) to the
+two ramified places, and let
+\[
+ \mathcal D=\langle(d_{v_1},0),(0,d_{v_2})\rangle.
+\]
+The exact finite-field certificates give
+\begin{center}\begin{tabular}{rcccc}\toprule
+\(n_0\)&\(\dim\mathcal S^+\)&localization kernel&\(\dim\mathcal D\)&
+\(\dim(\mathcal S_R^+\cap\mathcal D)\)\\\midrule
+\(-1\)&1&0&2&0\\
+\(1\)&1&0&2&0\\
+\(3\)&1&0&2&0\\\bottomrule
+\end{tabular}\end{center}
+We retain the global and local matrices, as well as the exact
+global representatives. Separate finite-field linear algebra
+reconstructs the Selmer upper bounds and verifies these intersections.
+
+\begin{proposition}\label{prop:odd}
+If \(n_0\in\{-1,1,3\}\), \(n\equiv n_0\bmod4356\), and
+\eqref{eq:cusp} holds, then \(n=n_0\).
+\end{proposition}
+\begin{proof}
+Suppose otherwise and form \(D\) as above. Its local Kummer images at
+the two ramified places vanish, since its formal depth is at least
+three. By \eqref{eq:selmer}, its global Kummer class is zero. Hence
+there is a global \(\lambda\)-division.
+At each ramified place the division is unique, because the twisted
+\(\lambda\)-torsion is zero. It is therefore exactly the formal
+division of Lemma~\ref{lem:log}.
+Repeat this argument while the depth is at least three. After the
+\(r\) divisions in \eqref{eq:divisions}, one obtains a global point
+whose pair of local Kummer images is in \(\mathcal S_R^+\).
+Equations \eqref{eq:direction}--\eqref{eq:muformula} show that this
+pair is a nonzero element of \(\mathcal D\), contradicting the
+computed zero intersection.
+\end{proof}
+
+
+\subsection{The even classes}
+We now let \(n_0\in\{-2,0,2,4\}\). The curve \eqref{eq:unit} is
+already defined over \(F\), and \(J[\lambda](F)=\langle T\rangle\)
+has order 11. At the three primes above 11 we have \(e=1\),
+\(\bar a=8\), and \(\overline{Y(P_0)}\ne0\). Thus
+\begin{equation}\label{eq:even-division}
+ \lambda:H_m\xrightarrow{\sim}H_{m+1}\qquad(m\ge1)
+\end{equation}
+by Lemma~\ref{lem:log}.
+At each such place write \(k=F_v\). We use the Abel map
+\(i:C\to J\), \(i(P)=[P-P_0]\).
+
+Let \(\mathcal S\) be the localization of the \(\lambda\)-Selmer
+group at the three primes over 11. Define
+\[
+ U=\prod_{v\mid11}\mu_v(H_1),\quad
+ T_{\mathrm{loc}}=\prod_{v\mid11}\langle\mu_v(T)\rangle,\quad
+ T_{\mathrm{glob}}=\langle(\mu_v(T))_v\rangle.
+\]
+The exact Selmer computations give
+\[
+\begin{array}{c|rrrr}
+ n_0&-2&0&2&4\\\hline
+ \dim\Sel^\lambda(J/F)&5&5&4&4\\
+ \dim\ker(\mathrm{loc}_{11})&0&0&0&0\\
+ \dim U&3&3&3&3\\
+ \dim T_{\mathrm{loc}}&3&3&3&3
+\end{array}
+\]
+and
+\begin{equation}\label{eq:intersection}
+ U\cap T_{\mathrm{loc}}=0,\qquad
+ \mathcal S\cap(U+T_{\mathrm{loc}})=T_{\mathrm{glob}}.
+\end{equation}
+Every local torsion image is nonzero. The class-group vanishing
+\eqref{eq:classes} also applies here. The split descent algebra is
+\(F\times F\), whose global \(S\)-class space has dimension 38.
+The calculation certifies 38 candidate classes by exact ideal
+membership and independent joint local images. It then imposes the
+norm and local conditions, including the condition at 2. This
+certifies the global space without a GRH assumption. The identities
+\eqref{eq:intersection} are verified from the saved localization
+matrices by exact linear algebra.
+
+\begin{proposition}\label{prop:even}
+If \(n_0\in\{-2,0,2,4\}\), \(n\equiv n_0\bmod4356\), and
+\eqref{eq:cusp} holds, then \(n=n_0\).
+\end{proposition}
+
+We first describe the local formal image used in
+\eqref{eq:intersection}. Here \(\pi=1-\zeta_{11}\) is a uniformizer
+and \(11/\pi^{10}\equiv-1\pmod\pi\).
+To compute \(\mu_v(H_1)\), choose smooth sections with distinct
+residual \(X\)-coordinates
+\(0,2,3,4,8\). At \(X=0\) choose \(Y=-b\).
+The sum of the five Abel maps is a system of formal coordinates, since
+its differential is a Vandermonde matrix with unit determinant.
+For a displacement \(X\mapsto X+\pi u\), direct expansion gives
+\[
+ \frac{Y_{\rm new}-b}{Y_{\rm old}-b}
+ \equiv
+ \begin{cases}
+ 1+\pi^{11}\bar u/(4\bar b^2)&\bar X=0,\\
+ 1&\bar X\in\{2,3,4,8\}
+ \end{cases}\pmod{\pi^{12}}.
+\]
+Indeed, at a nonzero residue the two possible terms of valuation 11
+in \((X+\pi u)^{11}-X^{11}\) cancel:
+\( (11/\pi^{10})\bar X^{10}\bar u+\bar u^{11}=0\).
+All elements of \(1+\pi^{12}\OO_k\) are eleventh powers, by logarithm
+and exponential on \(1+\pi^2\OO_k\). The first line generates the
+nonzero unramified Kummer line. Its nonvanishing is also verified by
+the local Kummer maps in the computation. Thus \(\dim\mu_v(H_1)=1\).
+
+Let
+\[
+ \ell_0(X)=\frac{(X-2)(X-3)(X-4)(X-8)}{(-2)(-3)(-4)(-8)}
+ =1+2X+2X^2+X^3+9X^4\in\F_{11}[X].
+\]
+This is the linear functional extracting the displacement at the section
+with residual coordinate zero, expressed in the differential basis.
+For a point \(P\) near \(P_0\), suppose \(v_k(X(P)-X(P_0))=d\ge2\).
+Then \(i(P)\in H_d\setminus H_{d+1}\). Put
+\(Q=\lambda^{-(d-1)}i(P)\in H_1\), using the unique formal divisions
+in \eqref{eq:even-division}. Up to a nonzero scalar, its Kummer image is
+\begin{equation}\label{eq:leading}
+ h_{d-1}(8),\qquad
+ h_r(x)=\sum_{j=1}^5\ell_{0,j-1}\,x^{j-1}j^{-r},
+\end{equation}
+where \(\ell_{0,j-1}\) is the coefficient of \(X^{j-1}\) in \(\ell_0\).
+This follows by applying the diagonal leading action of successive
+formal divisions to the Abel tangent vector
+\((1,8,8^2,8^3,8^4)/(2\overline{Y(P_0)})\).
+All nonlinear terms disappear on the associated graded groups.
+In particular,
+\begin{equation}\label{eq:five}
+ r\equiv1\pmod{10}\quad\Longrightarrow\quad h_r(8)=h_1(8)=5\ne0.
+\end{equation}
+
+Normalize \(v_K(u)=1\) as above, and use the same integral minimal model.
+Its discriminant has valuation three. The point \(2G\) is formal, with
+parameter \(-x'/y'=4u\). If \(n\ne n_0\), let
+\(k_0=v_{11}(n-n_0)\ge2\). Since \(n-n_0\) is even, the elliptic
+formal logarithm, which is an isometry here, gives
+\[
+ v_K(t((n-n_0)G))=1+5k_0.
+\]
+For \(q_0=n_0G-3s\), the exact computations give
+\[
+ v_K(x(q_0)-4)=2,\quad v_K(y(q_0)+1/2)=3,
+ \quad v_K(\delta_{n_0})=2.
+\]
+Thus \(q_0\) is a smooth point on the special fibre of the minimal
+model, with unit \(y'\), and translation by the formal point gives
+\[
+ v_K(x(nG-3s)-x(q_0))=3+5k_0.
+\]
+Equation \eqref{eq:cusp} now yields
+\[
+ v_K(w^{11}-1)=1+5k_0,
+ \qquad v_K(w-1)=5k_0-4.
+\]
+For the second equality, first reduce modulo \(u\) to get \(\bar w=1\).
+In the binomial expansion the term \(11(w-1)\) then has strictly
+smaller valuation than all other nonzero terms, since \(v_K(11)=5\).
+At every \(v\mid11\) of \(F\) we obtain
+\begin{equation}\label{eq:d}
+ d=v_k(X(P)-X(P_0))=10k_0-8\ge12,
+ \qquad d-1\equiv1\pmod{10}.
+\end{equation}
+
+We choose the global square root so that \(P\) is near \(P_0\) at
+all three places. Put
+\[
+ R=(n/2)G+4s,\qquad R_0=(n_0/2)G+4s,
+\]
+so \(2R=nG-3s\). Then
+\begin{equation}\label{eq:root}
+ v(R)=\frac{(x(R)-\theta)^2-(3\theta^2-2\theta-7)}{2y(R)+1}
+\end{equation}
+satisfies \(v(R)^2=x(2R)-\theta\). At \(R_0\) this equals the chosen
+known square root exactly. Since \(4\mid M\), the difference
+\(R-R_0=((n-n_0)/2)G\) is formal. Its parameter has valuation at least
+22 over each \(F_v\). All \(R_0\) have integral minimal coordinates.
+The computed valuations are
+\[
+ 4\le v_k(x(R_0)-\theta)\le6,\quad
+ v_k(2y(R_0)+1)\le8,\quad v_k(v(R_0))=2.
+\]
+Translation in the minimal coordinates changes the original \(x\)
+and \(y\) coordinates by quantities of valuations at least 26 and 28.
+Substituting in \eqref{eq:root} shows
+\(v(R)/v(R_0)\equiv1\pmod{\pi^{20}}\).
+This fixes the required signs simultaneously. Since \(2Y(P_0)\) is
+a unit, \(P\) is in its smooth residue disc, and \eqref{eq:d} applies.
+
+\begin{lemma}\label{lem:global}
+Under the Selmer injectivity and intersection conditions in
+\eqref{eq:intersection}, no global point \(D\in J(F)\) can satisfy
+\(D\in\prod_{v\mid11}H_{d,v}\), with \(d\ge2\), and have a nonzero
+Kummer image after its \(d-1\) successive formal \(\lambda\)-divisions.
+\end{lemma}
+\begin{proof}
+Write \(Q_j\) for the formal quotient \(\lambda^{-j}D\), for
+\(0\le j\le d-1\). Initially \(Q_0=D\) is global, and its local
+Kummer image is zero because \(H_d\subset\lambda H_1\).
+Injectivity of Selmer localization implies that its global Kummer
+class is zero. Hence a global \(R\) with \(\lambda R=Q_0\) exists.
+Locally, \(R=Q_1+t_vT\), for scalars \(t_v\in\F_{11}\). Its local
+Kummer image lies both in \(\mathcal S\) and in \(U+T_{\rm loc}\).
+By \eqref{eq:intersection}, the formal contribution is zero and all
+\(t_v\) coincide. Subtracting this global multiple of \(T\) shows
+that \(Q_1\) is global and has zero global Kummer class, the latter
+again by localization injectivity. Repeating the argument shows that
+the local Kummer image of \(Q_{d-1}\) is zero, as asserted.
+\end{proof}
+
+\begin{proof}[Proof of Proposition~\ref{prop:even}]
+If \(n\ne n_0\), the construction above gives \(D=i(P)\in J(F)\)
+with depth \(d=10k_0-8\) at every place above 11.
+Equations \eqref{eq:leading}--\eqref{eq:five} show that its final formal
+quotient has nonzero Kummer image at every such place. This contradicts
+Lemma~\ref{lem:global}.
+\end{proof}
+
+This is the division-image argument of Selmer-group Chabauty,
+applied to the isogeny \(\lambda\). See
+\cite[Theorem~2.1 and Remark~2.2]{Stoll}.
+
+
+\begin{proof}[Proof of Theorem~\ref{thm:main}]
+The six-prime sieve puts the image of every rational point into one
+of the seven states \eqref{eq:sieve}. The cusp identity gives
+\eqref{eq:cusp}. Propositions~\ref{prop:odd} and \ref{prop:even}
+then give \(n=n_0\). The seven base points are listed in
+Table~\ref{tab:121}, and each has its unique rational CM lift.
+There are no rational cusps, since their images would be rational
+cusps on \(E\), whose cusp divisor has degree five and is irreducible.
+This proves the assertion.
+\end{proof}
+
+\section{Computational data}\label{sec:computations}
+
+We use Magma V2.30-1 \cite{Magma} for the algebraic computations
+and Python for the finite sieve. The ancillary data contain the
+exact inputs, completed logs and the finite-field matrices used
+in the proof. We describe the necessary calculations and the
+supplementary checks separately.
+
+\subsection{The sieve and the auxiliary curves}
+We construct the six-prime tables directly from the normalized
+functions \(f_m\). The program \texttt{six\_prime\_sieve.py}
+enumerates the possible classes and congruences. It retains every
+cusp residue, so no additional criterion at a cusp is needed.
+The exact computation of the known CM classes gives the seven
+states in \eqref{eq:sieve}.
+
+The files \texttt{verify\_descent.m} and
+\texttt{verify\_genus5.m} check the normalized function identity,
+the number fields and the seven genus-five equations. The
+valuation and square-root identities used in the local argument
+are checked by \texttt{verify\_even\_geometry.m},
+\texttt{verify\_odd\_geometry.m} and
+\texttt{verify\_odd\_depth.m}.
+
+\subsection{The Selmer calculations}
+For each odd class, we give fifteen exact elements of \(B\)
+and their joint local images. We check that the valuations
+outside \(S\) are divisible by 11. Their independent local
+images, together with the proved global dimension, certify the
+global basis. We generate each of the three local Kummer images
+using actual local divisors until its dimension is five. The
+resulting matrices determine the Selmer upper bound and verify
+\eqref{eq:selmer} and the zero intersections with the two formal
+direction lines.
+
+For each even class, the data give the Selmer localization, the
+three formal lines and the three local torsion lines. Exact
+linear algebra verifies \eqref{eq:intersection}. The global
+basis certificate and the local conditions at 2 and 11 are
+included in the reproduction scripts.
+
+GRH is used to find candidate generators, but each candidate is
+subsequently checked by ideal factorization and local
+independence. The required dimensions follow from
+\eqref{eq:classes}. Thus the global bases and the resulting
+Selmer bounds are certified without GRH.
+
+The odd calculation is recorded at precisions 80 and 160. We
+accept a local Kummer evaluation only when its relative
+precision is at least \(2v(11)+2\), which exceeds the
+eleventh-power detection threshold. The finite-field matrix
+audits do not depend on a further local approximation. The
+formal-group lemmas in Section~\ref{sec:local} give the
+mathematical argument relating these data to rational points.
+
+\subsection{Supplementary checks and reproduction}
+The cases \(n=n_0+4356\) and \(n=n_0+11\cdot4356\) give
+additional checks of the odd depth and direction formulas at
+both ramified places. They are checked by
+\texttt{verify\_local\_depth\_examples.m}. These examples are
+not used in place of the argument for arbitrary
+\(v_{11}(n-n_0)\) in Section~\ref{sec:local}.
+
+The command \texttt{audit\_saved\_certificates.py} repeats the
+finite sieve, compares its surviving classes with the exact CM
+classes and verifies all saved odd and even matrix identities.
+It does not repeat the number-field calculations or generate
+local points. The ancillary instructions give separate commands
+for the full descents and the exact geometry checks, together
+with a manifest of SHA-256 hashes.
+
+\begin{thebibliography}{9}
+
+\bibitem{Magma}
+W. Bosma, J. Cannon and C. Playoust,
+\emph{The Magma algebra system. I. The user language},
+J. Symbolic Comput. \textbf{24} (1997), 235--265.
+
+\bibitem{Od}
+A. M. Odlyzko,
+\emph{Table 4: Unconditional bounds for discriminants},
+November 29, 1976,
+\url{https://www-users.cse.umn.edu/~odlyzko/unpublished/discr.bound.table4}.
+
+\bibitem{OdDescription}
+A. M. Odlyzko,
+\emph{Discriminant bounds: description of tables},
+November 29, 1976,
+\url{https://www-users.cse.umn.edu/~odlyzko/unpublished/discr.bound.tables.txt}.
+
+\bibitem{RSZB}
+J. Rouse, A. V. Sutherland and D. Zureick-Brown,
+\emph{\(\ell\)-adic images of Galois for elliptic curves over
+\(\Q\)}, with an appendix with J. Voight,
+Forum Math. Sigma \textbf{10} (2022), e62,
+\href{https://arxiv.org/abs/2106.11141}{arXiv:2106.11141}.
+
+\bibitem{ST}
+R. Schoof and N. Tzanakis,
+\href{https://www.mat.uniroma2.it/~schoof/AA-schoof-tzanakis.pdf}
+{\emph{Integral points of a modular curve of level 11}},
+Acta Arith. \textbf{152} (2012), 39--49.
+
+\bibitem{Stoll}
+M. Stoll,
+\href{https://www.mathe2.uni-bayreuth.de/stoll/papers/ratpts-selmer-2016-12-07.pdf}
+{\emph{Chabauty without the Mordell--Weil group}}, preprint (2017).
+\end{thebibliography}
+
+\end{document}

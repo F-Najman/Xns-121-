@@ -1,0 +1,13 @@
+Loading "outputs/original_jmap.m"
+Rank bounds: 1; generators: [ (4 : 5 : 1) ]
+Compact numerator degrees: 27, 26
+CM points (n, coordinates, j, CM discriminant):
+-2 (2 : -1 : 1) -12288000 -27
+-1 (4 : -6 : 1) 287496 -16
+0 (0 : 1 : 0) 54000 -12
+1 (4 : 5 : 1) -147197952000 -67
+2 (2 : 0 : 1) 1728 -4
+3 (5/4 : 7/8 : 1) 0 -3
+4 (-2 : 3 : 1) -262537412640768000 -163
+Loading "outputs/compact_jmap.m"
+AUDIT_DONE

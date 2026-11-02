@@ -1,0 +1,16 @@
+verify_model exit=0 secs=1
+cm_classes exit=0 secs=0
+verify_cm_lifts exit=0 secs=0
+verify_descent exit=0 secs=1
+verify_genus5 exit=0 secs=2
+verify_nontorsion exit=0 secs=25
+verify_class_obstruction exit=0 secs=7
+verify_odd_depth exit=0 secs=2
+verify_odd_geometry exit=0 secs=7
+verify_even_geometry exit=0 secs=6
+verify_local_depth_examples exit=0 secs=136
+gen_sieve exit=0 secs=1
+sieve data identical to archived
+sieve.py exit=0
+audit exit=0
+LANE_A_DONE

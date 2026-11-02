@@ -1,0 +1,5 @@
+Loading "code/setup.m"
+SETUP_DONE
+ODLYZKO_11_CLASS_OBSTRUCTION twist=1 degree=30 discriminant=[ <2, 30>, <11, 28> ]
+ODLYZKO_11_CLASS_OBSTRUCTION twist=-11 degree=30 discriminant=[ <2, 30>, <11, 27> ]
+ODLYZKO_11_CLASS_OBSTRUCTION F_degree=30 B_degree=60; all root discriminants <19; unramified degree-11 extensions excluded unconditionally

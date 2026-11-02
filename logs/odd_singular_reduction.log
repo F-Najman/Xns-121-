@@ -1,0 +1,15 @@
+Loading "code/setup.m"
+SETUP_DONE
+ODD_BRANCH_EXTENSION v(eta)=5 relative_ramification=2 relative_residue_degree=1
+ODD_POINT n=-1 Xbar=-1 Ybar=0 v_B(Y)=1
+ODD_POINT n=1 Xbar=-1 Ybar=0 v_B(Y)=1
+ODD_POINT n=3 Xbar=-1 Ybar=0 v_B(Y)=1
+ODD_BRANCH_EXTENSION v(eta)=5 relative_ramification=2 relative_residue_degree=1
+ODD_POINT n=-1 Xbar=-1 Ybar=0 v_B(Y)=1
+ODD_POINT n=1 Xbar=-1 Ybar=0 v_B(Y)=1
+ODD_POINT n=3 Xbar=-1 Ybar=0 v_B(Y)=1
+ODD_BRANCH_EXTENSION v(eta)=10 relative_ramification=1 relative_residue_degree=2
+ODD_POINT n=-1 Xbar=-1 Ybar=0 v_B(Y)=1
+ODD_POINT n=1 Xbar=-1 Ybar=0 v_B(Y)=1
+ODD_POINT n=3 Xbar=-1 Ybar=0 v_B(Y)=1
+ODD_SINGULAR_REDUCTION_VERIFIED

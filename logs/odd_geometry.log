@@ -1,0 +1,9 @@
+Loading "code/setup.m"
+SETUP_DONE
+ODD_ELLIPTIC_DEPTH n=-1 v_K(x')=1 v_K(y')=1 v_K(delta)=2; v_K(w-1)=5k-3
+ODD_ELLIPTIC_DEPTH n=1 v_K(x')=1 v_K(y')=1 v_K(delta)=2; v_K(w-1)=5k-3
+ODD_ELLIPTIC_DEPTH n=3 v_K(x')=1 v_K(y')=1 v_K(delta)=2; v_K(w-1)=5k-3
+ODD_GLOBAL_SQUARE_ROOT_RATIO_VERIFIED n=-1 value_at_identity=1
+ODD_GLOBAL_SQUARE_ROOT_RATIO_VERIFIED n=1 value_at_identity=1
+ODD_GLOBAL_SQUARE_ROOT_RATIO_VERIFIED n=3 value_at_identity=1
+ODD_DEPTH_AND_BRANCH_INPUTS_VERIFIED

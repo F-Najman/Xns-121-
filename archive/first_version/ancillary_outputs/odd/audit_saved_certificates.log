@@ -1,0 +1,33 @@
+{"prime": 353, "order_G": 11, "modulus": 11, "states": 7, "ranks": [[3, 3, 3]]}
+{"prime": 23, "order_G": 33, "modulus": 33, "states": 10, "ranks": [[3, 3, 3], [5, 5, 5]]}
+{"prime": 3301, "order_G": 33, "modulus": 33, "states": 7, "ranks": [[5, 5, 5]]}
+{"prime": 12101, "order_G": 1089, "modulus": 1089, "states": 12, "ranks": [[5, 5, 5]]}
+{"prime": 15731, "order_G": 726, "modulus": 2178, "states": 7, "ranks": [[5, 5, 5]]}
+{"prime": 53, "order_G": 12, "modulus": 4356, "states": 7, "ranks": [[5, 5, 5]]}
+SIX_PRIME_SIEVE_VERIFIED modulus=4356 states=7 CM_classes_match=true
+EXACT_CM_CLASS_LOG_MATCHES_SIX_PRIME_SIEVE
+ODD CASE n=-1 precision=80
+ODD_MATRIX_AUDIT_PASSED global_dim=15 local_dims=5,5,5 selmer_dim=1 ramified_kernel=0 direction_intersection=0
+ODD CASE n=1 precision=80
+ODD_MATRIX_AUDIT_PASSED global_dim=15 local_dims=5,5,5 selmer_dim=1 ramified_kernel=0 direction_intersection=0
+ODD CASE n=3 precision=80
+ODD_MATRIX_AUDIT_PASSED global_dim=15 local_dims=5,5,5 selmer_dim=1 ramified_kernel=0 direction_intersection=0
+ODD CASE n=-1 precision=160
+ODD_MATRIX_AUDIT_PASSED global_dim=15 local_dims=5,5,5 selmer_dim=1 ramified_kernel=0 direction_intersection=0
+ODD CASE n=1 precision=160
+ODD_MATRIX_AUDIT_PASSED global_dim=15 local_dims=5,5,5 selmer_dim=1 ramified_kernel=0 direction_intersection=0
+ODD CASE n=3 precision=160
+ODD_MATRIX_AUDIT_PASSED global_dim=15 local_dims=5,5,5 selmer_dim=1 ramified_kernel=0 direction_intersection=0
+EVEN CASE tag=minus2
+MATRIX_CERTIFICATE_VERIFIED selmer=5 formal=3 local_torsion=3 
+intersection=global_torsion
+EVEN CASE tag=0
+MATRIX_CERTIFICATE_VERIFIED selmer=5 formal=3 local_torsion=3 
+intersection=global_torsion
+EVEN CASE tag=2
+MATRIX_CERTIFICATE_VERIFIED selmer=4 formal=3 local_torsion=3 
+intersection=global_torsion
+EVEN CASE tag=4
+MATRIX_CERTIFICATE_VERIFIED selmer=4 formal=3 local_torsion=3 
+intersection=global_torsion
+ALL_SAVED_CERTIFICATE_AUDITS_PASSED

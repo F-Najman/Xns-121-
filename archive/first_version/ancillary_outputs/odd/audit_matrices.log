@@ -1,0 +1,12 @@
+CASE n=-1 precision=80
+ODD_MATRIX_AUDIT_PASSED global_dim=15 local_dims=5,5,5 selmer_dim=1 ramified_kernel=0 direction_intersection=0
+CASE n=1 precision=80
+ODD_MATRIX_AUDIT_PASSED global_dim=15 local_dims=5,5,5 selmer_dim=1 ramified_kernel=0 direction_intersection=0
+CASE n=3 precision=80
+ODD_MATRIX_AUDIT_PASSED global_dim=15 local_dims=5,5,5 selmer_dim=1 ramified_kernel=0 direction_intersection=0
+CASE n=-1 precision=160
+ODD_MATRIX_AUDIT_PASSED global_dim=15 local_dims=5,5,5 selmer_dim=1 ramified_kernel=0 direction_intersection=0
+CASE n=1 precision=160
+ODD_MATRIX_AUDIT_PASSED global_dim=15 local_dims=5,5,5 selmer_dim=1 ramified_kernel=0 direction_intersection=0
+CASE n=3 precision=160
+ODD_MATRIX_AUDIT_PASSED global_dim=15 local_dims=5,5,5 selmer_dim=1 ramified_kernel=0 direction_intersection=0

@@ -1,0 +1,61 @@
+Loading "code/compact_jmap.m"
+M2: (A+By)(c) is an 11-unit for all 5 cusps
+CUSPS_OK: 5 cusps r*s, r in [ 1, 4, 3, 9, 5 ], s of order 11
+GLOBAL_CLASS n0=-2 classes=[
+[ 0, 2, 8, 10, 5 ],
+[ 0, 1, 6, 8, 10 ],
+[ 0, 4, 9, 2, 6 ]
+]
+GLOBAL_CLASS n0=-1 classes=[
+[ 0, 8, 7, 8, 6 ],
+[ 0, 4, 0, 8, 8 ],
+[ 0, 0, 5, 10, 4 ]
+]
+GLOBAL_CLASS n0=1 classes=[
+[ 0, 7, 1, 0, 7 ],
+[ 0, 6, 4, 5, 10 ],
+[ 0, 6, 10, 7, 4 ]
+]
+GLOBAL_CLASS n0=2 classes=[
+[ 0, 9, 3, 1, 6 ],
+[ 0, 0, 1, 1, 5 ],
+[ 0, 5, 8, 7, 6 ]
+]
+GLOBAL_CLASS n0=3 classes=[
+[ 0, 6, 6, 3, 8 ],
+[ 0, 8, 8, 2, 1 ],
+[ 0, 0, 7, 3, 10 ]
+]
+GLOBAL_CLASS n0=4 classes=[
+[ 0, 7, 6, 2, 1 ],
+[ 0, 1, 9, 0, 3 ],
+[ 0, 7, 3, 0, 8 ]
+]
+TABLE l=353 N=11 deg=1 unknown_residues=1
+TABLE l=353 N=11 deg=1 unknown_residues=1
+TABLE l=353 N=11 deg=1 unknown_residues=1
+TABLE l=353 N=11 deg=1 unknown_residues=1
+TABLE l=353 N=11 deg=1 unknown_residues=1
+TABLE l=23 N=33 deg=1 unknown_residues=6
+TABLE l=23 N=33 deg=1 unknown_residues=6
+TABLE l=23 N=33 deg=1 unknown_residues=6
+TABLE l=23 N=33 deg=1 unknown_residues=6
+TABLE l=23 N=33 deg=1 unknown_residues=6
+TABLE l=3301 N=33 deg=1 unknown_residues=1
+TABLE l=3301 N=33 deg=1 unknown_residues=1
+TABLE l=3301 N=33 deg=1 unknown_residues=1
+TABLE l=3301 N=33 deg=1 unknown_residues=1
+TABLE l=3301 N=33 deg=1 unknown_residues=1
+TABLE l=12101 N=1089 deg=1 unknown_residues=6
+TABLE l=12101 N=1089 deg=1 unknown_residues=6
+TABLE l=12101 N=1089 deg=1 unknown_residues=6
+TABLE l=12101 N=1089 deg=1 unknown_residues=6
+TABLE l=12101 N=1089 deg=1 unknown_residues=6
+TABLE l=15731 N=726 deg=1 unknown_residues=6
+TABLE l=15731 N=726 deg=1 unknown_residues=6
+TABLE l=15731 N=726 deg=1 unknown_residues=6
+TABLE l=15731 N=726 deg=1 unknown_residues=6
+TABLE l=15731 N=726 deg=1 unknown_residues=6
+TABLE l=53 N=12 deg=5 unknown_residues=1
+SURVIVORS mod 4356: [ -396, -2, -1, 0, 1, 2, 3, 4, 1782, 2178 ]
+CONSERVATIVE_RUN_DONE: 10 residue classes survive

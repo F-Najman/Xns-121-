@@ -1,0 +1,20 @@
+Loading "code/setup.m"
+SETUP_DONE
+EVEN_GEOMETRY n=-2 v(x(q0)-4)=2 v(y(q0)+1/2)=3 v(delta)=2; canonical square root verified
+EVEN_GEOMETRY n=0 v(x(q0)-4)=2 v(y(q0)+1/2)=3 v(delta)=2; canonical square root verified
+EVEN_GEOMETRY n=2 v(x(q0)-4)=2 v(y(q0)+1/2)=3 v(delta)=2; canonical square root verified
+EVEN_GEOMETRY n=4 v(x(q0)-4)=2 v(y(q0)+1/2)=3 v(delta)=2; canonical square root verified
+LAGRANGE_WEIGHTS=[ 1, 2, 2, 1, 9 ] H_1(8)=5
+EVEN_POINT_REDUCTION n=-2 X=8 Y=8
+EVEN_POINT_REDUCTION n=0 X=8 Y=3
+EVEN_POINT_REDUCTION n=2 X=8 Y=8
+EVEN_POINT_REDUCTION n=4 X=8 Y=3
+EVEN_POINT_REDUCTION n=-2 X=8 Y=8
+EVEN_POINT_REDUCTION n=0 X=8 Y=3
+EVEN_POINT_REDUCTION n=2 X=8 Y=8
+EVEN_POINT_REDUCTION n=4 X=8 Y=3
+EVEN_POINT_REDUCTION n=-2 X=8 Y=3
+EVEN_POINT_REDUCTION n=0 X=8 Y=3
+EVEN_POINT_REDUCTION n=2 X=8 Y=3
+EVEN_POINT_REDUCTION n=4 X=8 Y=3
+EVEN_BRANCH_FORMAL_INPUTS_VERIFIED

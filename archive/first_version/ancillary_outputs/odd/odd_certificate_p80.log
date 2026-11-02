@@ -1,0 +1,113 @@
+Loading "outputs/retry/verify_genus5.m"
+Loading "outputs/verify_descent.m"
+alpha=x(2s)=z^4 - z^3 - 3*z^2 + 3*z + 2
+gamma=x(3s)-x(2s)=-2*z^4 + z^3 + 8*z^2 - 2*z - 4
+b = sum c_m a_m mod 11, c=[ 7, 10, 6 ]; unramified correction lambda=3
+Exact function-field identity verified.
+n=-2 delta=-5*z^4 + 4*z^3 + 18*z^2 - 15*z - 5
+  known point (w,Y)=(1,44*z^4 - 14*z^3 - 158*z^2 + 74*z + 35), genus=16
+n=-1 delta=-4*z^4 + 2*z^3 + 14*z^2 - 7*z - 5
+  known point (w,Y)=(1,-12*z^4 + 8*z^3 + 42*z^2 - 34*z - 5), genus=16
+n=0 delta=-2*z^4 + z^3 + 8*z^2 - 2*z - 4
+  known point (w,Y)=(1,-4*z^4 - 4*z^3 + 10*z^2 + 4*z - 7), genus=16
+n=1 delta=3*z^4 + 12*z^3 + 6*z^2 - 11*z - 3
+  known point (w,Y)=(1,76*z^4 + 206*z^3 + 42*z^2 - 166*z - 49), genus=16
+n=2 delta=-4*z^4 - 6*z^3 + 10*z^2 + 17*z + 5
+  known point (w,Y)=(1,36*z^4 + 72*z^3 - 86*z^2 - 198*z - 49), genus=16
+n=3 delta=10*z^4 - 11*z^3 - 24*z^2 + 18*z + 10
+  known point (w,Y)=(1,-232*z^4 + 184*z^3 + 526*z^2 - 232*z - 115), genus=16
+n=4 delta=1067*z^4 + 764*z^3 - 4486*z^2 - 1927*z + 3751
+  known point (w,Y)=(1,133836*z^4 + 95738*z^3 - 562590*z^2 - 241366*z + 470203), genus=16
+HYPERELLIPTIC_DESCENT_DONE
+n=-2 genus=5 eta=1 known_v=1/11*(4*z^4 + 4*z^3 - 8*z^2 - 16*z - 10)*theta^2 + 1/11*(2*z^4 + 4*z^3 - 14*z - 14)*theta + 1/11*(-6*z^4 - 25*z^3 - 15*z^2 + 103*z + 73)
+n=-1 genus=5 eta=-theta + 4 known_v=1/121*(-4*z^4 - 12*z^3 + 80*z^2 - 4*z - 152)*theta^2 + 1/121*(-12*z^4 - 14*z^3 + 108*z^2 + 10*z - 148)*theta + 1/121*(-20*z^4 + 94*z^3 - 282*z^2 - 108*z + 791)
+n=0 genus=5 eta=1 known_v=1/11*(-4*z^4 - 4*z^3 + 20*z^2 + 8*z - 22)*theta^2 + 1/11*(-2*z^4 - 4*z^3 + 14*z^2 + 12*z - 16)*theta + 1/11*(17*z^4 + 25*z^3 - 90*z^2 - 55*z + 108)
+n=1 genus=5 eta=-theta + 4 known_v=1/121*(-4*z^4 - 12*z^3 + 36*z^2 + 40*z - 64)*theta^2 + 1/121*(-12*z^4 - 58*z^3 - 2*z^2 + 98*z - 16)*theta + 1/121*(-20*z^4 + 28*z^3 - 106*z^2 - 196*z + 307)
+n=2 genus=5 eta=1 known_v=1/11*(4*z^4 - 12*z^2 + 4*z - 2)*theta^2 + 1/11*(2*z^4 - 8*z^3 - 12*z^2 + 24*z + 10)*theta + 1/11*(-28*z^4 - z^3 + 86*z^2 - 17*z + 3)
+n=3 genus=5 eta=-theta + 4 known_v=1/121*(40*z^4 - 12*z^3 - 140*z^2 + 84*z + 24)*theta^2 + 1/121*(54*z^4 + 30*z^3 - 200*z^2 - 34*z + 50)*theta + 1/121*(-262*z^4 + 160*z^3 + 840*z^2 - 614*z - 155)
+n=4 genus=5 eta=1 known_v=1/11*(20*z^4 + 12*z^3 - 80*z^2 - 24*z + 62)*theta^2 + 1/11*(-62*z^4 - 44*z^3 + 264*z^2 + 114*z - 226)*theta + 1/11*(-138*z^4 - 93*z^3 + 565*z^2 + 203*z - 451)
+ALL_SEVEN_c0_ARE_2_UNITS; valuation_at_unique_prime_above_2=2
+GENUS5_REDUCTION_VERIFIED; DESCENT_FIELD_DEGREES=30,60
+ODLYZKO_INPUTS_VERIFIED; Cl(B)[11]=Cl(F)[11]=0; global norm kernel dimension=15
+LOCAL_TOWER_READY index=1 e_B=20 residue_size=11 precision=80
+LOCAL_TOWER_READY index=2 e_B=20 residue_size=11 precision=80
+LOCAL_TOWER_READY index=3 e_B=10 residue_size=121 precision=80
+Time: 5.340
+SUBFIELD_CANDIDATES twist=1 count=22
+GLOBAL_ANTI_GENERATOR twist=1 candidate=6 dimension=1
+GLOBAL_ANTI_GENERATOR twist=1 candidate=7 dimension=2
+GLOBAL_ANTI_GENERATOR twist=1 candidate=8 dimension=3
+GLOBAL_ANTI_GENERATOR twist=1 candidate=9 dimension=4
+GLOBAL_ANTI_GENERATOR twist=1 candidate=10 dimension=5
+GLOBAL_ANTI_GENERATOR twist=1 candidate=11 dimension=6
+GLOBAL_ANTI_GENERATOR twist=1 candidate=12 dimension=7
+GLOBAL_ANTI_GENERATOR twist=1 candidate=13 dimension=8
+GLOBAL_ANTI_GENERATOR twist=1 candidate=17 dimension=9
+GLOBAL_ANTI_GENERATOR twist=1 candidate=19 dimension=10
+Time: 5.060
+SUBFIELD_CANDIDATES twist=-11 count=17
+GLOBAL_ANTI_GENERATOR twist=-11 candidate=2 dimension=11
+GLOBAL_ANTI_GENERATOR twist=-11 candidate=3 dimension=12
+GLOBAL_ANTI_GENERATOR twist=-11 candidate=7 dimension=13
+GLOBAL_ANTI_GENERATOR twist=-11 candidate=8 dimension=14
+GLOBAL_ANTI_GENERATOR twist=-11 candidate=9 dimension=15
+GLOBAL_ANTI_BASIS_CERTIFIED dimension=15 GRH_required=false
+ODD_LOCAL_IMAGE n=-1 place=1 dimension=1 attempt=2
+ODD_LOCAL_IMAGE n=-1 place=1 dimension=2 attempt=3
+ODD_LOCAL_IMAGE n=-1 place=1 dimension=3 attempt=4
+ODD_LOCAL_IMAGE n=-1 place=1 dimension=4 attempt=6
+ODD_LOCAL_IMAGE n=-1 place=1 dimension=5 attempt=8
+ODD_LOCAL_IMAGE n=-1 place=2 dimension=1 attempt=3
+ODD_LOCAL_IMAGE n=-1 place=2 dimension=2 attempt=4
+ODD_LOCAL_IMAGE n=-1 place=2 dimension=3 attempt=5
+ODD_LOCAL_IMAGE n=-1 place=2 dimension=4 attempt=7
+ODD_LOCAL_IMAGE n=-1 place=2 dimension=5 attempt=9
+ODD_LOCAL_IMAGE n=-1 place=3 dimension=1 attempt=1
+ODD_LOCAL_IMAGE n=-1 place=3 dimension=2 attempt=3
+ODD_LOCAL_IMAGE n=-1 place=3 dimension=3 attempt=4
+ODD_LOCAL_IMAGE n=-1 place=3 dimension=4 attempt=5
+ODD_LOCAL_IMAGE n=-1 place=3 dimension=5 attempt=135
+ODD_SELMER_UPPER_BOUND n=-1 dimension=1 rank_over_L_le=5
+ODD_LOCAL_IMAGE n=1 place=1 dimension=1 attempt=3
+ODD_LOCAL_IMAGE n=1 place=1 dimension=2 attempt=5
+ODD_LOCAL_IMAGE n=1 place=1 dimension=3 attempt=10
+ODD_LOCAL_IMAGE n=1 place=1 dimension=4 attempt=11
+ODD_LOCAL_IMAGE n=1 place=1 dimension=5 attempt=16
+ODD_LOCAL_IMAGE n=1 place=2 dimension=1 attempt=2
+ODD_LOCAL_IMAGE n=1 place=2 dimension=2 attempt=3
+ODD_LOCAL_IMAGE n=1 place=2 dimension=3 attempt=4
+ODD_LOCAL_IMAGE n=1 place=2 dimension=4 attempt=11
+ODD_LOCAL_IMAGE n=1 place=2 dimension=5 attempt=19
+ODD_LOCAL_IMAGE n=1 place=3 dimension=1 attempt=1
+ODD_LOCAL_IMAGE n=1 place=3 dimension=2 attempt=2
+ODD_LOCAL_IMAGE n=1 place=3 dimension=3 attempt=4
+ODD_LOCAL_IMAGE n=1 place=3 dimension=4 attempt=6
+ODD_LOCAL_IMAGE n=1 place=3 dimension=5 attempt=263
+ODD_SELMER_UPPER_BOUND n=1 dimension=1 rank_over_L_le=5
+ODD_LOCAL_IMAGE n=3 place=1 dimension=1 attempt=1
+ODD_LOCAL_IMAGE n=3 place=1 dimension=2 attempt=2
+ODD_LOCAL_IMAGE n=3 place=1 dimension=3 attempt=9
+ODD_LOCAL_IMAGE n=3 place=1 dimension=4 attempt=12
+ODD_LOCAL_IMAGE n=3 place=1 dimension=5 attempt=17
+ODD_LOCAL_IMAGE n=3 place=2 dimension=1 attempt=2
+ODD_LOCAL_IMAGE n=3 place=2 dimension=2 attempt=4
+ODD_LOCAL_IMAGE n=3 place=2 dimension=3 attempt=5
+ODD_LOCAL_IMAGE n=3 place=2 dimension=4 attempt=7
+ODD_LOCAL_IMAGE n=3 place=2 dimension=5 attempt=25
+ODD_LOCAL_IMAGE n=3 place=3 dimension=1 attempt=3
+ODD_LOCAL_IMAGE n=3 place=3 dimension=2 attempt=4
+ODD_LOCAL_IMAGE n=3 place=3 dimension=3 attempt=6
+ODD_LOCAL_IMAGE n=3 place=3 dimension=4 attempt=7
+ODD_LOCAL_IMAGE n=3 place=3 dimension=5 attempt=62
+ODD_SELMER_UPPER_BOUND n=3 dimension=1 rank_over_L_le=5
+ODD_SELMER_BOUNDS_DONE
+ODD_FORMAL_DIRECTION n=-1 place=1 nonzero=true exponent_mod_10=3
+ODD_FORMAL_DIRECTION n=-1 place=2 nonzero=true exponent_mod_10=3
+ODD_FORMAL_INTERSECTION n=-1 selmer_dim=1 ramified_localization_kernel_dim=0 independent_directions_dim=2 intersection_dim=0
+ODD_FORMAL_DIRECTION n=1 place=1 nonzero=true exponent_mod_10=3
+ODD_FORMAL_DIRECTION n=1 place=2 nonzero=true exponent_mod_10=3
+ODD_FORMAL_INTERSECTION n=1 selmer_dim=1 ramified_localization_kernel_dim=0 independent_directions_dim=2 intersection_dim=0
+ODD_FORMAL_DIRECTION n=3 place=1 nonzero=true exponent_mod_10=3
+ODD_FORMAL_DIRECTION n=3 place=2 nonzero=true exponent_mod_10=3
+ODD_FORMAL_INTERSECTION n=3 selmer_dim=1 ramified_localization_kernel_dim=0 independent_directions_dim=2 intersection_dim=0
+ODD_FORMAL_DIRECTION_TESTS_DONE

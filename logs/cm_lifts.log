@@ -1,0 +1,16 @@
+C1 D=-3 j=0: p=7 a_p=-1, Frobenius g in F_121 has g^30 <> 1
+C1 D=-4 j=1728: p=5 a_p=2, Frobenius g in F_121 has g^20 <> 1
+C1 D=-12 j=54000: p=7 a_p=-4, Frobenius g in F_121 has g^10 <> 1
+C1 D=-16 j=287496: p=5 a_p=2, Frobenius g in F_121 has g^10 <> 1
+C1 D=-27 j=-12288000: p=7 a_p=-1, Frobenius g in F_121 has g^10 <> 1
+C1 D=-67 j=-147197952000: p=17 a_p=-1, Frobenius g in F_121 has g^10 <> 1
+C1 D=-163 j=-262537412640768000: p=41 a_p=-1, Frobenius g in F_121 has g^10 <> 1
+C1 VERIFIED: a unique rational lift above each CM point
+Loading "code/compact_jmap.m"
+C2 n0=-2: the fibre of j above -12288000 contains exactly one rational point, n0*G
+C2 n0=-1: the fibre of j above 287496 contains exactly one rational point, n0*G
+C2 n0=0: the fibre of j above 54000 contains exactly one rational point, n0*G
+C2 n0=1: the fibre of j above -147197952000 contains exactly one rational point, n0*G
+C2 n0=2: the fibre of j above 1728 contains exactly one rational point, n0*G
+C2 n0=3: the fibre of j above 0 contains exactly one rational point, n0*G
+C2 n0=4: the fibre of j above -262537412640768000 contains exactly one rational point, n0*G

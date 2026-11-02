@@ -1,0 +1,14 @@
+Loading "code/setup.m"
+SETUP_DONE
+Time: 6.170
+E1 n0=2 GLOBAL_BASIS_CERTIFIED dim F(S,11)=19, injective at 11
+E2 n0=2 place=1 local image dimension=6 after 57 attempts
+E2 n0=2 place=2 local image dimension=6 after 45 attempts
+E2 n0=2 place=3 local image dimension=6 after 85 attempts
+E2 n0=2 place=2-adic local image = <mu(T)>, dimension 1
+E3 n0=2 dim Sel(with 2)=4 dim Sel(without 2)=4; localisation at 11 injective
+E4 n0=2 place=1 a=8 b^2=1 Y0=8 mu(T) nonzero=true
+E4 n0=2 place=2 a=8 b^2=1 Y0=8 mu(T) nonzero=true
+E4 n0=2 place=3 a=8 b^2=1 Y0=3 mu(T) nonzero=true
+E3 n0=2 U cap Tloc = 0, Sel cap (U+Tloc) = Tglob; without the 2-adic condition: injective=true, intersection=Tglob: true
+EVEN_SELMER_DONE n0=2 dimSel=4

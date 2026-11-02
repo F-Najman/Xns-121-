@@ -1,0 +1,57 @@
+SetColumns(0); SetMemoryLimit(6*10^9);
+load "outputs/retry/verify_genus5.m";
+// Prove the fixed-field class-group inputs before using GRH for discovery.
+time CL:=ClassGroup(Integers(LS));
+H<zz>:=CyclotomicField(11);
+time CH:=ClassGroup(Integers(H));
+assert #CL eq 1 and #CH eq 1;
+assert Discriminant(DefiningPolynomial(L)) eq -1331/16;
+assert not IsSquare(K!(-11));
+assert #Roots(PolynomialRing(F)![F|41/4,-7,-1,1]) eq 3;
+assert Degree(F) eq 6*Degree(K);
+printf "CLASS_GROUP_SUBFIELD_PROOF_VERIFIED; Cl(F)[11]=0 by S3 restriction and norm\n";
+SetClassGroupBounds("GRH");
+if not assigned NN then NN:=0; elif Type(NN) eq MonStgElt then NN:=StringToInteger(NN); end if;
+assert NN in [-2..4]; i:=NN+3;
+FV<V>:=PolynomialRing(F);
+c0:=conv(Deltas[i]/(L!alpha-theta)); eta:=conv(Etas[i]);
+c:=-eta^11*c0^10;
+xs:=eta*c0; ys:=eta^6*c0^5/conv(beta);
+if IsOdd(NN) then c/:=conv(beta)^22; xs/:=conv(beta)^2; ys/:=conv(beta)^11; end if;
+den:=Denominator(c*Integers(F));
+d:=&*[Integers()|pp[1]^Ceiling(pp[2]/22):pp in Factorisation(den)];
+cint:=d^22*c; xs*:=d^2; ys*:=d^11;
+assert (Integers(F)!cint) eq cint;
+gmonic:=V^2+cint;
+Y0:=ys*conv(KnownV[i]); X0:=xs;
+assert X0^11 eq Evaluate(gmonic,Y0);
+Attach("work/continuation/picndescent.m");
+SetVerbose("Selmer",2);
+time ds,SJ,SP,rt,ma,mt,vec,fb,data:=ContinuationPicnDescent(gmonic,11 : FastPrecision:=160, CertifySplitGlobal:=IsEven(NN));
+boundL:=5*(ds-rt);
+printf "RANK_BOUND n=%o L=%o global_basis_audited=%o\n",NN,boundL,IsEven(NN);
+S:=data[1]; Gglob:=data[2]; muGlobal:=data[3]; restrictions:=data[4];
+muLocals:=data[5]; completions:=data[6]; toComponents:=data[7]; reps:=data[8];
+ker11:=SJ;
+for j in [1..#S] do
+ if Norm(S[j]) mod 11 eq 0 then ker11:=ker11 meet Kernel(restrictions[j]); end if;
+end for;
+printf "SELMER_LOCALIZATION_AT_11_KERNEL_DIMENSION=%o\n",Ngens(ker11);
+A:=Domain(muGlobal);
+muP:=muGlobal(A!Y0-A.1);
+assert muP in SJ;
+knownImage:=sub<Gglob|Generators(mt) join {muP}>;
+printf "KNOWN_POINT_IMAGE=%o\nKNOWN_PLUS_TORSION_IMAGE_DIMENSION=%o\n",Eltseq(muP),Ngens(knownImage);
+printf "KERNEL_INCLUDED_IN_KNOWN_IMAGE=%o\n",ker11 subset knownImage;
+// Save compact exact matrices for the next local calculation.
+if not assigned TAG then TAG:=IntegerToString(NN); end if;
+out:="outputs/continuation/selmer_" cat TAG cat "_data.m";
+Write(out,"// Exact Selmer localization data; ambient coordinates are over GF(11).\n" : Overwrite:=true);
+Write(out,"SelmerBasis := " cat Sprint([Eltseq(Gglob!a):a in OrderedGenerators(SJ)]) cat ";\n");
+Write(out,"KnownPointImage := " cat Sprint(Eltseq(muP)) cat ";\n");
+Write(out,"TorsionImageBasis := " cat Sprint([Eltseq(Gglob!a):a in OrderedGenerators(mt)]) cat ";\n");
+Write(out,"KnownSubgroupBasis := " cat Sprint([Eltseq(Gglob!a):a in OrderedGenerators(knownImage)]) cat ";\n");
+Write(out,"LocalPrimeNorms := " cat Sprint([Norm(v):v in S]) cat ";\n");
+Write(out,"LocalizationMatrices := " cat Sprint([[Eltseq(rr(Gglob.j)):j in [1..Ngens(Gglob)]]:rr in restrictions]) cat ";\n");
+printf "SELMER_DATA_SAVED %o\n",out;
+// A subsequent command-line input file may use the live maps and fields.
