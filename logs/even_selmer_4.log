@@ -1,8 +1,8 @@
 Loading "code/setup.m"
 SETUP_DONE
-Time: 6.180
+Time: 3.400
 E1 n0=4 GLOBAL_BASIS_CERTIFIED dim F(S,11)=19, injective at 11
-E2 n0=4 place=1 local image dimension=6 after 81 attempts
+E2 n0=4 place=1 local image dimension=6 after 113 attempts
 E2 n0=4 place=2 local image dimension=6 after 125 attempts
 E2 n0=4 place=3 local image dimension=6 after 81 attempts
 E2 n0=4 place=2-adic local image = <mu(T)>, dimension 1

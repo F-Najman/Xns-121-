@@ -5,10 +5,12 @@
 //
 // O3 (odd n0): the image of the Selmer bound S^+ (dimension 1) in the local
 //    Kummer group at v is nonzero, and does not contain the final formal
-//    direction d_v.
+//    direction kappa_v^- (called d_v in the first version).
 // E5 (even n0): the localisation of the Selmer bound at v is injective, the
 //    formal line U_v does not contain mu_v(T), and
 //    loc_v(Sel) meet (U_v + <mu_v(T)>) = <mu_v(T)>.
+// E6 (even n0, Prop. 7.4 b)): the class kappa_v of 1+pi^11, which spans U_v,
+//    is not in loc_v(Sel), i.e. loc_v(Sel) meet U_v = 0.
 load "code/setup.m";
 OF := Integers(F);
 eta := conv(4-theta);
@@ -48,6 +50,9 @@ for n0 in [-2,0,2,4] do
     assert (S meet (U+T)) eq T;
     printf "E5 n0=%o place=%o: dim Sel=%o, localisation injective, Sel_v cap (U_v+T_v) = T_v\n",
       n0, j, #SelmerLocalRows;
+    assert T subset S;                 // mu_v(T) is the localisation of a global class
+    assert Dimension(S meet U) eq 0;   // kappa_v is not in loc_v(Sel)
+    printf "E6 n0=%o place=%o: kappa_v not in loc_v(Sel)\n", n0, j;
   end for;
 end for;
 // For comparison (not used): the third place above 11, where v(4-theta) is even.

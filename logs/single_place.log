@@ -8,13 +8,21 @@ O3 n0=1 place=2: loc_v(S+) nonzero, d_v not in loc_v(S+)
 O3 n0=3 place=1: loc_v(S+) nonzero, d_v not in loc_v(S+)
 O3 n0=3 place=2: loc_v(S+) nonzero, d_v not in loc_v(S+)
 E5 n0=-2 place=1: dim Sel=5, localisation injective, Sel_v cap (U_v+T_v) = T_v
+E6 n0=-2 place=1: kappa_v not in loc_v(Sel)
 E5 n0=-2 place=2: dim Sel=5, localisation injective, Sel_v cap (U_v+T_v) = T_v
+E6 n0=-2 place=2: kappa_v not in loc_v(Sel)
 E5 n0=0 place=1: dim Sel=5, localisation injective, Sel_v cap (U_v+T_v) = T_v
+E6 n0=0 place=1: kappa_v not in loc_v(Sel)
 E5 n0=0 place=2: dim Sel=5, localisation injective, Sel_v cap (U_v+T_v) = T_v
+E6 n0=0 place=2: kappa_v not in loc_v(Sel)
 E5 n0=2 place=1: dim Sel=4, localisation injective, Sel_v cap (U_v+T_v) = T_v
+E6 n0=2 place=1: kappa_v not in loc_v(Sel)
 E5 n0=2 place=2: dim Sel=4, localisation injective, Sel_v cap (U_v+T_v) = T_v
+E6 n0=2 place=2: kappa_v not in loc_v(Sel)
 E5 n0=4 place=1: dim Sel=4, localisation injective, Sel_v cap (U_v+T_v) = T_v
+E6 n0=4 place=1: kappa_v not in loc_v(Sel)
 E5 n0=4 place=2: dim Sel=4, localisation injective, Sel_v cap (U_v+T_v) = T_v
+E6 n0=4 place=2: kappa_v not in loc_v(Sel)
 THIRD_PLACE even n0=-2: dim Sel=5, dim of its localisation=5
 THIRD_PLACE even n0=0: dim Sel=5, dim of its localisation=5
 THIRD_PLACE even n0=2: dim Sel=4, dim of its localisation=3

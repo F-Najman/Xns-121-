@@ -4,7 +4,7 @@ ODLYZKO_INPUTS_VERIFIED; Cl(B)[11]=Cl(F)[11]=0; global norm kernel dimension=15
 LOCAL_TOWER_READY index=1 e_B=20 residue_size=11 precision=160
 LOCAL_TOWER_READY index=2 e_B=20 residue_size=11 precision=160
 LOCAL_TOWER_READY index=3 e_B=10 residue_size=121 precision=160
-Time: 9.460
+Time: 4.580
 SUBFIELD_CANDIDATES twist=1 count=22
 GLOBAL_ANTI_GENERATOR twist=1 candidate=5 dimension=1
 GLOBAL_ANTI_GENERATOR twist=1 candidate=6 dimension=2
@@ -16,7 +16,7 @@ GLOBAL_ANTI_GENERATOR twist=1 candidate=14 dimension=7
 GLOBAL_ANTI_GENERATOR twist=1 candidate=16 dimension=8
 GLOBAL_ANTI_GENERATOR twist=1 candidate=17 dimension=9
 GLOBAL_ANTI_GENERATOR twist=1 candidate=18 dimension=10
-Time: 9.260
+Time: 4.530
 SUBFIELD_CANDIDATES twist=-11 count=17
 GLOBAL_ANTI_GENERATOR twist=-11 candidate=1 dimension=11
 GLOBAL_ANTI_GENERATOR twist=-11 candidate=3 dimension=12

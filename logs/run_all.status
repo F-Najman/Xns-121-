@@ -1,19 +1,20 @@
-model exit=0 seconds=1
-genus exit=0 seconds=0
-cm_lifts exit=0 seconds=1
-sieve_bruteforce exit=0 seconds=18
-setup exit=0 seconds=2
-class_groups exit=0 seconds=7
-odd_geometry exit=0 seconds=2
-odd_singular_reduction exit=0 seconds=7
-even_geometry exit=0 seconds=5
-even_selmer_-2 exit=0 seconds=56
-nontorsion exit=0 seconds=24
-even_selmer_0 exit=0 seconds=58
-odd_selmer_p160 exit=0 seconds=123
-even_selmer_2 exit=0 seconds=53
-odd_depth_examples exit=0 seconds=132
-odd_selmer_p80 exit=0 seconds=88
-even_selmer_4 exit=0 seconds=57
-single_place exit=0 seconds=2
-ALL_DONE
+model exit=0 seconds=0 PASS
+genus exit=0 seconds=0 PASS
+cm_lifts exit=0 seconds=1 PASS
+sieve_bruteforce exit=0 seconds=10 PASS
+sieve_bruteforce_conservative exit=0 seconds=10 PASS
+setup exit=0 seconds=1 PASS
+class_groups exit=0 seconds=4 PASS
+odd_geometry exit=0 seconds=1 PASS
+odd_singular_reduction exit=0 seconds=4 PASS
+even_selmer_-2 exit=0 seconds=33 PASS
+even_geometry exit=0 seconds=3 PASS
+nontorsion exit=0 seconds=14 PASS
+even_selmer_0 exit=0 seconds=32 PASS
+odd_selmer_p160 exit=0 seconds=67 PASS
+even_selmer_2 exit=0 seconds=33 PASS
+odd_selmer_p80 exit=0 seconds=48 PASS
+even_selmer_4 exit=0 seconds=33 PASS
+odd_depth_examples exit=0 seconds=84 PASS
+single_place exit=0 seconds=1 PASS
+ALL_PASSED
