@@ -224,7 +224,7 @@ All of A–C were applied to the Overleaf `main.tex`, in addition to the followi
   all the computations and independently reimplemented the sieve, the even Selmer groups, the CM
   lifts and the genus.
 - **Correction to item D.** The README hardware line was already corrected in the author's commit
-  55f75ec. Only `~/CLAUDE.md` still had the old figures, and it is now updated.
+  55f75ec, and `~/CLAUDE.md` had also already been updated. Nothing needed changing.
 - **Kept in prose.** The Selmer containment `Sel ⊆ k(S_k,11)` (good reduction away from 2 and
   11) stays a prose sentence, as in the first version. Making it a lemma would need a pinpoint
   reference for the unramifiedness of local images at primes of good reduction, which was not
