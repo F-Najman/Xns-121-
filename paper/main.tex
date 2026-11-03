@@ -36,8 +36,8 @@
 \newcommand{\lmfdbec}[3]{\href{https://www.lmfdb.org/EllipticCurve/Q/#1/#2/#3}{#1.#2#3}}
 
 % All links to the code point to this revision of the repository.
-\newcommand{\repocommit}{b0b88fdbd7c437da662424641d9b55d993076e1b}
-\newcommand{\reposhort}{b0b88fd}
+\newcommand{\repocommit}{c12c8c3705ed0b6b52254df69bd5ffe84542d568}
+\newcommand{\reposhort}{c12c8c3}
 \newcommand{\gitlink}[2]{\href{https://github.com/F-Najman/Xns-121-/blob/\repocommit/#1}{#2}}
 \newcommand{\githubbare}[1]{\href{https://github.com/F-Najman/Xns-121-/blob/\repocommit/#1}{\path{#1}}}
 
@@ -70,9 +70,9 @@ We show that the modular curve $\Xns{121}$, attached to the normalizer of a non-
 
 \section{Introduction}
 
-Let $E$ be an elliptic curve over $\Q$ without complex multiplication (CM) and let $\ell$ be a prime. Serre \cite{Serre72} proved that the image of the $\ell$-adic Galois representation $\rho_{E,\ell^\infty}\colon G_\Q\rightarrow \GL_2(\Z_\ell)$ is open, and that the mod $\ell$ representation $\overline\rho_{E,\ell}$ is surjective for all but finitely many $\ell$. He asked whether $\overline \rho_{E,\ell}$ is surjective for all $\ell>37$. If it is not, then by the work of Mazur \cite{Mazur78}, Serre \cite{Serre72} and Bilu, Parent and Rebolledo \cite{BPR13}, the image of $\overline\rho_{E,\ell}$ is contained in the normalizer of a non-split Cartan subgroup of $\GL_2(\F_\ell)$, and Serre's question becomes the question whether the modular curves $\Xns{\ell}$ have non-CM rational points.
+Let $E$ be an elliptic curve over $\Q$ without complex multiplication (CM) and let $\ell$ be a prime. Serre \cite{Serre72} proved that the image of the $\ell$-adic Galois representation $\rho_{E,\ell^\infty}\colon G_\Q\rightarrow \GL_2(\Z_\ell)$ is open, and that the mod $\ell$ representation $\overline\rho_{E,\ell}$ is surjective for all but finitely many $\ell$. He asked whether the primes $\ell$ for which $\overline\rho_{E,\ell}$ is not surjective can be bounded independently of $E$, and it is expected that over $\Q$ the bound $37$ suffices (see \cite{Zywina15}). For $\ell>37$, by the work of Mazur \cite{Mazur78}, Serre \cite{Serre72} and Bilu, Parent and Rebolledo \cite{BPR13}, if $\overline\rho_{E,\ell}$ is not surjective, then its image is contained in the normalizer of a non-split Cartan subgroup of $\GL_2(\F_\ell)$, so this question becomes the question whether the modular curves $\Xns{\ell}$ have non-CM rational points.
 
-Rouse, Sutherland and Zureick-Brown \cite{RSZB22} determined, for every prime $\ell$, the possible $\ell$-adic images of non-CM elliptic curves over $\Q$, apart from the images contained in the normalizer of a non-split Cartan subgroup of level $\ell\geq 19$ and apart from the images corresponding to rational points on finitely many explicit modular curves, whose rational points they could not determine: the curves $\Xns{N}$ for $N=27, 25, 49, 121$, and two curves of level $49$ and genus $9$ (see \cite[Theorem 1.6]{RSZB22}). Balakrishnan, Betts, Hast, Jha and M\"uller \cite{BBHJM25} have since determined the rational points on $\Xns{27}$, and Furio and Lombardo \cite{FL25} the rational points on $\Xns{49}$. The curve $\Xns{121}$ has genus $511$, and Rouse, Sutherland and Zureick-Brown did not compute a model of it. Using the map $\Xns{121}\rightarrow \Xns{11}$ to an elliptic curve of rank $1$, they showed with a Mordell-Weil sieve that a non-CM rational point on $\Xns{121}$ would map to a multiple $kP$ of a generator $P$ with $|k|\geq \lcm(1,2,\ldots,233)$, and hence its $j$-invariant would have height roughly $10^{7.92\cdot 10^{202}}$ (see \cite[Section 9.2]{RSZB22}).
+Rouse, Sutherland and Zureick-Brown \cite{RSZB22} determined, for every prime $\ell$, the possible $\ell$-adic images of non-CM elliptic curves over $\Q$, apart from the images contained in the normalizer of a non-split Cartan subgroup of level $\ell\geq 19$ and apart from the images corresponding to rational points on finitely many explicit modular curves, whose rational points they could not determine: the curves $\Xns{N}$ for $N=27, 25, 49, 121$, and two curves of level $49$ and genus $9$ (see \cite[Theorem 1.6]{RSZB22}). Balakrishnan, Betts, Hast, Jha and M\"uller \cite{BBHJM25} have since determined the rational points on $\Xns{27}$, Furio and Lombardo \cite{FL25} the rational points on $\Xns{49}$, and Arango-Pi\~neros and Zureick-Brown \cite{APZB26} showed that the two curves of level $49$ and genus $9$ have no non-CM rational points. The curve $\Xns{121}$ has genus $511$, and Rouse, Sutherland and Zureick-Brown did not compute a model of it. Using the map $\Xns{121}\rightarrow \Xns{11}$ to an elliptic curve of rank $1$, they showed with a Mordell-Weil sieve that a non-CM rational point on $\Xns{121}$ would map to a multiple $kP$ of a generator $P$ with $|k|\geq \lcm(1,2,\ldots,233)$, and hence its $j$-invariant would have height roughly $10^{7.92\cdot 10^{202}}$ (see \cite[Section 9.2]{RSZB22}).
 
 In this paper we determine the rational points on $\Xns{121}$. Our main result is the following theorem.
 
@@ -91,7 +91,8 @@ Let $E/\Q$ be an elliptic curve without CM. Then $\rho_{E,121}(G_\Q)$ is not con
 If $\rho_{E,121}(G_\Q)$ were contained in such a group, then $j(E)$ would be the $j$-invariant of a non-CM rational point on $\Xns{121}$, contradicting \Cref{thm:main}. The second statement now follows from \cite[Theorem 1.6]{RSZB22}, as for $\ell=11$ we have just excluded case (iii) of that theorem, and case (iv) occurs only for $\ell=7$.
 \end{proof}
 
-Thus the $11$-adic images of Galois of non-CM elliptic curves over $\Q$ are now completely determined. Of the curves listed in \cite[Theorem 1.6]{RSZB22}, the rational points on $\Xns{25}$ and on the two curves of level $49$ and genus $9$ remain undetermined (at least to our knowledge).
+Thus the $11$-adic images of Galois of non-CM elliptic curves over $\Q$ are now completely determined. Of the curves listed in \cite[Theorem 1.6]{RSZB22}, only the rational points on $\Xns{25}$ remain undetermined (at least to our knowledge).
+% TODO (author): mention the companion paper on Xns+(25) here, if it is to be cited.
 
 We now describe our methods. We never use a model of $\Xns{121}$. The only information about $\Xns{121}$ that we use is the moduli interpretation of the map $\varphi\colon \Xns{121}\rightarrow \Xns{11}$ of degree $121$, at the cusps and at the CM points. The curve $\Xns{11}$ is the elliptic curve
 $$E\colon y^2+y=x^3-x^2-7x+10$$
@@ -349,7 +350,7 @@ For b), note that $\tau(T)=T$, so if $hT\in J^\eta(k)$ for some $h\in\Z$, then $
 For a field $k\supseteq F$ we call the maps $\mu_k$ of \Cref{lem:kummer} (for our $b$ and $\eta=4-\theta$) the \textit{Kummer maps}. For a number field $k\supseteq F$ we denote by $\Sel^\lambda(J/k)\subseteq k^\times/k^{\times 11}$ the $\lambda$-Selmer group, which is the set of classes whose localizations lie in the images of the local Kummer maps at all places. It contains $\mu_k(J(k)/\lambda J(k))$. The curve $C$ has good reduction at all the primes not above $2$ and $11$, since $b$ is a unit at these primes, so $\Sel^\lambda(J/k)\subseteq k(S_k,11)$, where $S_k$ is the set of primes of $k$ above $2$ and $11$. For odd $n_0$ we define $\Sel^\lambda(J^\eta/F)$ in the same way, and it is contained in $B(S_B,11)^-$.
 
 \begin{remark}\label{rem:ranks}
-Our arguments do not use the ranks of $J(F)$ and $J^\eta(F)$, but we can determine some of them. For odd $n_0$ the Selmer group $\Sel^\lambda(J^\eta/F)$ has dimension $1$ and contains the non-zero class $\mu_F([P_0-\infty])$ (\Cref{prop:odd_selmer}). As $J^\eta(F)$ is a $\Z[\zeta_{11}]$-module with no $\lambda$-torsion, it follows that it has rank $1$ over $\Z[\zeta_{11}]$ and rank $10$ over $\Z$, and the Jacobian of $C_{n_0}$ has rank $5$ over $L$. For even $n_0$ we get that the rank of $J(F)$ is at most $40$, $40$, $30$ and $30$ for $n_0=-2,0,2,4$ (\Cref{prop:even_selmer}).
+Our arguments do not use the ranks of $J(F)$ and $J^\eta(F)$, but we can determine some of them. For odd $n_0$ the Selmer group $\Sel^\lambda(J^\eta/F)$ has dimension $1$ and contains the non-zero class $\mu_F([P_0-\infty])$ (\Cref{prop:odd_selmer}). As $J^\eta(F)$ is a $\Z[\zeta_{11}]$-module with no $\lambda$-torsion, it follows that it has rank $1$ over $\Z[\zeta_{11}]$ and rank $10$ over $\Z$. The non-trivial automorphism of $F/L$ acts on the $1$-dimensional $\Q(\zeta_{11})$-vector space $J^\eta(F)\otimes\Q$ semilinearly with respect to $\zeta_{11}\mapsto\zeta_{11}^{-1}$, so its fixed space $J^\eta(L)\otimes\Q$ has dimension $5$ over $\Q$, and the Jacobian of $C_{n_0}$ has rank $5$ over $L$. For even $n_0$ we get that the rank of $J(F)$ is at most $40$, $40$, $30$ and $30$ for $n_0=-2,0,2,4$ (\Cref{prop:even_selmer}).
 \end{remark}
 
 \section{Formal groups}\label{sec:formal}
@@ -408,7 +409,7 @@ Let $l$ be a finite extension of $\Q_{11}$ containing $\zeta_{11}$ and with resi
 $$\mu_l(D)=-\frac{1}{2\overline b}\left(\sum_{j=1}^5 \ell_{j-1}c_j\right)\kappa_l,$$
 where $\kappa_l$ is the class of $1+\pi^{11}$ in $l^\times/l^{\times 11}$ and
 $$\ell_0+\ell_1X+\cdots+\ell_4X^4=\prod_{h\in\{2,3,4,8\}}\frac{X-h}{-h}=1+2X+2X^2+X^3+9X^4\in\F_{11}[X].$$
-\item[b)] Suppose $e=2$, let $l=k(\sqrt\eta)$ with $k\simeq\Q_{11}(\zeta_{11})$, $\eta, b\in k$ and $v(\eta)$ odd, let $\tau$ be the non-trivial automorphism of $l/k$, and let $\mu_k$ be the map of \Cref{lem:kummer} b) for $J^\eta$ over $k$. Choose $\varpi$ with $\tau(\varpi)=-\varpi$, and put $H_m^-=\{D\in H_m:\tau(D)=-D\}$. Then $H_2^-=H_3^-=\lambda H_1^-$, $\mu_k(H_2^-)=0$, and the restriction of $\mu_k$ to $H_1^-$ factors through the isomorphism $H_1^-/H_2^-\simeq\F_{11}^5$ given by the leading vector.
+\item[b)] Suppose that $l=k(\sqrt\eta)$, where $k\simeq\Q_{11}(\zeta_{11})$, $\eta,b\in k$ and $v_k(\eta)$ is odd, so $e=2$. Let $\tau$ be the non-trivial automorphism of $l/k$, let $J^\eta$ be the Jacobian of $\eta Y^2=X^{11}+b^2$, with $J^\eta(k)$ identified with $\{D\in J(l):\tau(D)=-D\}$, and let $\mu_k$ be the map of \Cref{lem:kummer} b) for $J^\eta$ over $k$. Choose $\varpi$ with $\tau(\varpi)=-\varpi$, and put $H_m^-=\{D\in H_m:\tau(D)=-D\}$. Then $H_2^-=H_3^-=\lambda H_1^-$, $\mu_k(H_2^-)=0$, and the restriction of $\mu_k$ to $H_1^-$ factors through the isomorphism $H_1^-/H_2^-\simeq\F_{11}^5$ given by the leading vector.
 \end{itemize}
 \end{lemma}
 
@@ -472,8 +473,7 @@ Let $n_0\in\{-2,0,2,4\}$. For a prime $v$ of $F$ above $11$ let $W_v\subseteq F_
 $$\mathcal S=\{c\in F(S_F,11): \loc_v(c)\in W_v \text{ for all } v\mid 11\}.$$
 \begin{itemize}
 \item[a)] We have $\Sel^\lambda(J/F)\subseteq\mathcal S$, and $\dim\mathcal S=5,5,4,4$ for $n_0=-2,0,2,4$, respectively.
-\item[b)] Let $v$ be one of the two primes of $F$ above $11$ with $v(4-\theta)$ odd, and let $\kappa_v$ be the class of $1+\pi^{11}$ in $F_v^\times/F_v^{\times 11}$. Then $\loc_v$ is injective on $\mathcal S$, $\kappa_v\notin \langle\mu_{F_v}(T)\rangle$, and
-$$\loc_v(\mathcal S)\cap\left(\langle\kappa_v\rangle+\langle\mu_{F_v}(T)\rangle\right)=\langle\mu_{F_v}(T)\rangle.$$
+\item[b)] Let $v$ be one of the two primes of $F$ above $11$ with $v(4-\theta)$ odd, and let $\kappa_v$ be the class of $1+\pi^{11}$ in $F_v^\times/F_v^{\times 11}$. Then $\loc_v$ is injective on $\mathcal S$, and $\kappa_v\notin\loc_v(\mathcal S)$.
 \end{itemize}
 \end{proposition}
 
@@ -484,6 +484,28 @@ The inclusion in a) is clear from the definitions. We \gitlink{code/even_selmer.
 \begin{remark}
 Imposing also the local conditions at the prime of $F$ above $2$ does not make the spaces $\mathcal S$ of \Cref{prop:even_selmer} smaller (see \githubbare{code/even_selmer.m}). In \Cref{prop:odd_selmer,prop:even_selmer} the statements b) hold for both primes $v$ with $v(4-\theta)$ odd, but not for the third prime above $11$ (for $n_0=2$, the localization at the third prime is not injective on $\mathcal S$).
 \end{remark}
+
+\begin{lemma}\label{lem:division}
+Let $A$ be an abelian variety over a number field $k$, let $\psi$ be an isogeny from $A$ to itself defined over $k$, and let $v$ be a place of $k$. Suppose that the map $A(k)/\psi A(k)\rightarrow A(k_v)/\psi A(k_v)$ is injective and that $A[\psi](k_v)=A[\psi](k)$. If $D\in A(k)$ and $D'\in A(k_v)$ satisfy $\psi D'=D$, then $D'\in A(k)$.
+\end{lemma}
+
+\begin{proof}
+The image of $D$ in $A(k_v)/\psi A(k_v)$ is $0$, so by the injectivity $D=\psi D_0$ for some $D_0\in A(k)$. Then $D_0-D'\in A[\psi](k_v)=A[\psi](k)$, so $D'=D_0-(D_0-D')\in A(k)$.
+\end{proof}
+
+\begin{lemma}\label{lem:division_hyp}
+Let $v$ be one of the two primes of $F$ above $11$ with $v(4-\theta)$ odd.
+\begin{itemize}
+\item[a)] If $n_0\in\{-2,0,2,4\}$, then the Jacobian $J$ over $F$, the isogeny $\lambda$ and the place $v$ satisfy the hypotheses of \Cref{lem:division}.
+\item[b)] If $n_0\in\{-1,1,3\}$, then the Jacobian $J^\eta$ over $F$, where $\eta=4-\theta$, the isogeny $\lambda$ and the place $v$ satisfy the hypotheses of \Cref{lem:division}.
+\end{itemize}
+\end{lemma}
+
+\begin{proof}
+a) Let $D\in J(F)$ be such that its image in $J(F_v)$ lies in $\lambda J(F_v)$. Then $\loc_v(\mu_F(D))=\mu_{F_v}(D)=0$. Since $\mu_F(D)\in\Sel^\lambda(J/F)\subseteq\mathcal S$, where $\mathcal S$ is as in \Cref{prop:even_selmer}, and $\loc_v$ is injective on $\mathcal S$ by \Cref{prop:even_selmer} b), we get $\mu_F(D)=0$, so $D\in\lambda J(F)$ by \Cref{lem:kummer} a). As $J[\lambda]=\langle T\rangle$ and $T\in J(F)$, we have $J[\lambda](F_v)=J[\lambda](F)$.
+
+b) Let $D\in J^\eta(F)$ be such that its image in $J^\eta(F_v)$ lies in $\lambda J^\eta(F_v)$, and let $\tilde v$ be the prime of $B$ above $v$. Then $\loc_{\tilde v}(\mu_F(D))=\mu_{F_v}(D)=0$. Since $\mu_F(D)\in\Sel^\lambda(J^\eta/F)\subseteq\mathcal S$, where $\mathcal S$ is as in \Cref{prop:odd_selmer}, and $\mathcal S$ and $\loc_{\tilde v}(\mathcal S)$ are both $1$-dimensional by \Cref{prop:odd_selmer}, we get $\mu_F(D)=0$, so $D\in\lambda J^\eta(F)$ by \Cref{lem:kummer} b). As $4-\theta$ is not a square in $F_v$, \Cref{lem:kummer} b) gives $J^\eta[\lambda](F_v)=J^\eta[\lambda](F)=0$.
+\end{proof}
 
 \section{The odd classes}\label{sec:odd}
 
@@ -504,16 +526,8 @@ $$v_\fp\big(x(nG-3s)-x(q_0)\big)=2+v_\fp\big(x'(q_0+Q)-x'(q_0)\big)=\begin{cases
 as the higher terms have valuation at least $2(1+5\nu)$. By assumption, $x(nG-3s)-x(q_0)=\delta_{n_0}(w^{11}-1)$, so $v_\fp(w^{11}-1)$ equals $5\nu+2$ or $5\nu+1$. In particular $w\equiv 1\pmod\fp$, and if $v_\fp(w-1)=h$, then in the expansion of $w^{11}-1$ in powers of $w-1$ the term $11(w-1)$, of valuation $5+h$, has smaller valuation than all the others, so $v_\fp(w^{11}-1)=5+h$. The lemma follows.
 \end{proof}
 
-\begin{lemma}\label{lem:odd_divide}
-Let $n_0\in\{-1,1,3\}$ and $\eta=4-\theta$, let $v$ be one of the two primes of $F$ above $11$ with $v(4-\theta)$ odd, let $k=F_v$, and let $l=B_{\tilde v}$ be the completion of $B$ at the prime $\tilde v$ above $v$. Let $H_m^-=\{D\in H_m:\tau(D)=-D\}$, where $H_m$ is taken for the pair $(l,b)$. Let $m\geq 3$, and let $D\in J^\eta(F)$ be such that its image in $J^\eta(k)$ lies in $H_m^-$. Then there is a unique $D_1\in J^\eta(F)$ with $\lambda D_1=D$, and the image of $D_1$ in $J^\eta(k)$ lies in $H_{m-2}^-$.
-\end{lemma}
-
-\begin{proof}
-By \Cref{lem:kummer} b), $J^\eta[\lambda](k)=0$, so $\lambda$ is injective on $J^\eta(F)$ and on $J^\eta(k)$, which proves the uniqueness. As $H_m^-\subseteq H_3^-$, we have $\mu_k(D)=0$ by \Cref{lem:kummer_formal} b), so $\loc_{\tilde v}(\mu_F(D))=0$. Since $\mu_F(D)\in\Sel^\lambda(J^\eta/F)\subseteq\mathcal S$ and $\mathcal S$ and $\loc_{\tilde v}(\mathcal S)$ are both $1$-dimensional by \Cref{prop:odd_selmer}, we get $\mu_F(D)=0$, and hence $D=\lambda D_1$ for some $D_1\in J^\eta(F)$ by \Cref{lem:kummer} b). By \Cref{lem:log} b), with $e=2$, there is a $D'\in H_{m-2}$ with $\lambda D'=D$. As $\lambda$ commutes with $\tau$, and $\tau(D')\in H_{m-2}$ (the logarithm commutes with $\tau$, as $\mathcal C$ and the $\omega_j$ are defined over $\OO_k$) satisfies $\lambda\tau(D')=-D=\lambda(-D')$, we have $\tau(D')=-D'$, so $D'\in H_{m-2}^-$. Both $D'$ and the image of $D_1$ in $J^\eta(k)$ are mapped to $D$ by $\lambda$, so they are equal.
-\end{proof}
-
 \begin{lemma}\label{lem:odd_end}
-Let $n_0\in\{-1,1,3\}$ and $\eta=4-\theta$, let $v$ be one of the two primes of $F$ above $11$ with $v(4-\theta)$ odd, let $k=F_v$, and let $l=B_{\tilde v}$ be the completion of $B$ at the prime $\tilde v$ above $v$. Let $H_m$ and the leading vectors be taken for the pair $(l,b)$ and a uniformizer $\varpi$ of $l$ with $\tau(\varpi)=-\varpi$. Then there is no $D\in J^\eta(F)$ whose image in $J^\eta(k)$ lies in $H_1^-$ and has leading vector a non-zero multiple of $(1,4,9,6,3)$.
+Let $n_0\in\{-1,1,3\}$ and $\eta=4-\theta$, let $v$ be one of the two primes of $F$ above $11$ with $v(4-\theta)$ odd, let $k=F_v$, and let $l=B_{\tilde v}$ be the completion of $B$ at the prime $\tilde v$ above $v$. Let $H_1$ and the leading vectors be taken for the pair $(l,b)$ and a uniformizer $\varpi$ of $l$ with $\tau(\varpi)=-\varpi$, and let $H_1^-=\{D\in H_1:\tau(D)=-D\}$. Then there is no $D\in J^\eta(F)$ whose image in $J^\eta(k)$ lies in $H_1^-$ and has leading vector a non-zero multiple of $(1,4,9,6,3)$.
 \end{lemma}
 
 \begin{proof}
@@ -527,11 +541,11 @@ Let $n_0\in\{-1,1,3\}$, let $\xi\in\Xns{121}(\Q)$, and suppose $\varphi(\xi)=nG$
 \begin{proof}
 Suppose the opposite, that $n\neq n_0$, and let $\nu=v_{11}(n-n_0)$. Let $v$ be one of the two primes of $F$ above $11$ with $v(4-\theta)$ odd, let $k=F_v$, and let $l=B_{\tilde v}$ be the completion of $B$ at the prime $\tilde v$ above $v$. Then $l=k(\sqrt\eta)$ is a ramified quadratic extension of $k\simeq\Q_{11}(\zeta_{11})$, so $e=2$ for the pair $(l,b)$, and $\varpi=\sqrt\eta/\pi^2$ is a uniformizer of $l$ with $\tau(\varpi)=-\varpi$.
 
-Let $P$ and $P_0$ be the points of $C(B)$ from \Cref{prop:genus5}, and put $D=[P-P_0]\in J^\eta(F)$. We \gitlink{code/odd_singular_reduction.m}{compute} that $a\equiv -1\pmod v$ (so $X(P_0)\equiv-\overline b^2$) and that $v_l(Y(P_0))=1$. Replacing $\rho$ by $-\rho$ in \Cref{prop:genus5} if necessary, which replaces $P$ by its image under the hyperelliptic involution, we may assume that $Y(P)/Y(P_0)\equiv 1\pmod\varpi$, as $Y(P)^2-Y(P_0)^2=f(X(P))-f(a)$, where $f(X)=X^{11}+b^2$, has valuation larger than $2$. By \Cref{cor:descent} and \Cref{lem:depth},
+Let $P$ and $P_0$ be the points of $C(B)$ from \Cref{prop:genus5}, and put $D=[P-P_0]\in J^\eta(F)$. We \gitlink{code/odd_singular_reduction.m}{compute} that $a\equiv -1\pmod v$ (so $\overline b^2=\overline a^{10}=1$ and $X(P_0)\equiv-\overline b^2$) and that $v_l(Y(P_0))=1$. Replacing $\rho$ by $-\rho$ in \Cref{prop:genus5} if necessary, which replaces $P$ by its image under the hyperelliptic involution, we may assume that $Y(P)/Y(P_0)\equiv 1\pmod\varpi$, as $Y(P)^2-Y(P_0)^2=f(X(P))-f(a)$, where $f(X)=X^{11}+b^2$, has valuation larger than $2$. By \Cref{cor:descent} and \Cref{lem:depth},
 $$d:=v_l(X(P)-a)=v_l(a(w-1))=4(5\nu-3)=20\nu-12\geq 28,$$
 so by \Cref{lem:discs} b), the image of $D$ in $J^\eta(k)$ lies in $H_{d-1}^-$ and $\log D\equiv (t/(2Y(P_0)))(a^{j-1})_j\pmod{\varpi^d}$, where $t=X(P)-a$.
 
-Let $N=10\nu-7$. Applying \Cref{lem:odd_divide} $N$ times, with $m=d-1,d-3,\ldots,d+1-2N=3$, we obtain $D_N\in J^\eta(F)$ with $\lambda^ND_N=D$ whose image $D_N'$ in $J^\eta(k)$ lies in $H_{d-1-2N}^-=H_1^-$. By \Cref{lem:log} b),
+Let $N=10\nu-7$, so $d-1-2N=1$. By \Cref{lem:log} b), with $e=2$, for $0\leq i\leq N$ there is a unique $D_i'\in H_{d-1-2i}$ with $\lambda^iD_i'=D$, and $\lambda D_{i+1}'=D_i'$. The logarithm commutes with $\tau$, as $\mathcal C$ and the $\omega_j$ are defined over $\OO_k$, so $\tau(D_i')\in H_{d-1-2i}$, and as $\lambda^i\tau(D_i')=\tau(D)=-D$, the uniqueness gives $\tau(D_i')=-D_i'$. Hence $D_i'\in J^\eta(k)$. By \Cref{lem:division,lem:division_hyp} b), applied $N$ times, $D_N'$ is the image of a point of $J^\eta(F)$, and it lies in $H_1^-$. By \Cref{lem:log} b),
 $$\log_j D_N'=(1-\zeta_{11}^j)^{-N}\log_j D\equiv \frac{t}{2Y(P_0)\pi^N}\,j^{-N}(-1)^{j-1}\pmod{\varpi^2},$$
 using $(1-\zeta_{11}^j)/\pi\equiv j\pmod \pi$, $a\equiv -1\pmod\varpi$ and $v_l(t/(2Y(P_0)\pi^N))=d-1-2N=1$. As $N\equiv 3\pmod{10}$, the leading vector of $D_N'$ is a non-zero multiple of
 $$\left((-1)^{j-1}j^{-3}\right)_{j=1,\ldots,5}=(1,4,9,6,3)\in\F_{11}^5,$$
@@ -540,22 +554,12 @@ which contradicts \Cref{lem:odd_end}.
 
 \section{The even classes}\label{sec:even}
 
-\begin{lemma}\label{lem:even_divide}
-Let $n_0\in\{-2,0,2,4\}$, let $v$ be one of the two primes of $F$ above $11$ with $v(4-\theta)$ odd, and let $l=F_v$, with $H_m$ taken for the pair $(l,b)$ and $\varpi=\pi$. Let $m\geq 2$ and let $D\in J(F)$ be such that its image in $J(l)$ lies in $H_m$. Then there is a $D_1\in J(F)$ with $\lambda D_1=D$ whose image in $J(l)$ lies in $H_{m-1}$.
-\end{lemma}
-
-\begin{proof}
-As $b$ is a unit at $v$ and the residue field of $l$ is $\F_{11}$, we have $\overline b^2=1$. As $H_m\subseteq H_2$, we have $\mu_l(D)=0$ by \Cref{lem:kummer_formal} a), so $\loc_v(\mu_F(D))=0$. Since $\mu_F(D)\in\Sel^\lambda(J/F)\subseteq\mathcal S$ and $\loc_v$ is injective on $\mathcal S$ by \Cref{prop:even_selmer} b), we get $\mu_F(D)=0$, and hence $D=\lambda D_2$ for some $D_2\in J(F)$ by \Cref{lem:kummer} a). By \Cref{lem:log} b), with $e=1$, there is a $D'\in H_{m-1}$ with $\lambda D'=D$. The image of $D_2-D'$ in $J(l)$ lies in $J[\lambda](l)=\langle T\rangle$, so $D_2=D'+hT$ in $J(l)$ for some $h\in\Z$. Then $D_1=D_2-hT\in J(F)$ satisfies $\lambda D_1=D$, and its image in $J(l)$ is $D'$.
-\end{proof}
-
 \begin{lemma}\label{lem:even_end}
 Let $n_0\in\{-2,0,2,4\}$, let $v$ be one of the two primes of $F$ above $11$ with $v(4-\theta)$ odd, and let $l=F_v$, with $H_m$ and the leading vectors taken for the pair $(l,b)$ and $\varpi=\pi$. Let $D\in J(F)$ be such that its image in $J(l)$ lies in $H_1\setminus H_2$ and has leading vector $(c_1,\ldots,c_5)$. Then $\sum_{j=1}^5\ell_{j-1}c_j=0$, where $\ell_0,\ldots,\ell_4$ are as in \Cref{lem:kummer_formal} a).
 \end{lemma}
 
 \begin{proof}
-As $b$ is a unit at $v$, we have $\overline b^2=1$, so by \Cref{lem:kummer_formal} a), $\mu_l(D)=-(2\overline b)^{-1}(\sum_j\ell_{j-1}c_j)\kappa_v$. On the other hand, $\mu_l(D)=\loc_v(\mu_F(D))$ with $\mu_F(D)\in\Sel^\lambda(J/F)\subseteq\mathcal S$, so by \Cref{prop:even_selmer} b),
-$$\mu_l(D)\in\loc_v(\mathcal S)\cap\langle\kappa_v\rangle\subseteq\langle\mu_l(T)\rangle\cap\langle\kappa_v\rangle=0,$$
-as $\kappa_v\notin\langle\mu_l(T)\rangle$. In particular $\kappa_v\neq 0$, and it follows that $\sum_j\ell_{j-1}c_j=0$.
+As $b=a^5$, where $a$ is a unit at $v$, and the residue field of $l$ is $\F_{11}$, we have $\overline b^2=\overline a^{10}=1$. By \Cref{lem:kummer_formal} a), $\mu_l(D)=-(2\overline b)^{-1}(\sum_j\ell_{j-1}c_j)\kappa_v$. On the other hand, $\mu_l(D)=\loc_v(\mu_F(D))\in\loc_v(\mathcal S)$, where $\mathcal S$ is as in \Cref{prop:even_selmer}, as $\mu_F(D)\in\Sel^\lambda(J/F)\subseteq\mathcal S$. Since $\kappa_v\notin\loc_v(\mathcal S)$ by \Cref{prop:even_selmer} b), and in particular $\kappa_v\neq 0$, it follows that $\sum_j\ell_{j-1}c_j=0$.
 \end{proof}
 
 \begin{proposition}\label{prop:even}
@@ -567,7 +571,7 @@ Suppose the opposite, that $n\neq n_0$, and let $\nu=v_{11}(n-n_0)$. Let $v$ be 
 $$d:=v(X(P)-a)=2(5\nu-4)=10\nu-8\geq 12,$$
 so by \Cref{lem:discs} a), $D\in H_d$ and $\log D\equiv (t/(2Y(P_0)))(a^{j-1})_j\pmod{\pi^{2d}}$, where $t=X(P)-a$.
 
-Applying \Cref{lem:even_divide} $d-1$ times, with $m=d,d-1,\ldots,2$, we obtain $D_{d-1}\in J(F)$ with $\lambda^{d-1}D_{d-1}=D$ whose image $D_{d-1}'$ in $J(l)$ lies in $H_1$. By \Cref{lem:log} b),
+By \Cref{lem:log} b), with $e=1$, for $0\leq i\leq d-1$ there is a unique $D_i'\in H_{d-i}$ with $\lambda^iD_i'=D$, and $\lambda D_{i+1}'=D_i'$. By \Cref{lem:division,lem:division_hyp} a), applied $d-1$ times, $D_{d-1}'$ is the image of a point of $J(F)$, and it lies in $H_1$. By \Cref{lem:log} b),
 $$\log_jD_{d-1}'=(1-\zeta_{11}^j)^{-(d-1)}\log_jD\equiv \frac{t}{2Y(P_0)\pi^{d-1}}\,j^{-(d-1)}8^{j-1}\pmod{\pi^2},$$
 and $v(t/(2Y(P_0)\pi^{d-1}))=1$. As $d-1=10\nu-9\equiv 1\pmod{10}$, the image $D_{d-1}'$ lies in $H_1\setminus H_2$, and its leading vector is a non-zero multiple of $(8^{j-1}/j)_{j}$. Since
 $$\sum_{j=1}^5\ell_{j-1}\frac{8^{j-1}}{j}=1+8+6+7+5=5\neq 0 \quad\text{in } \F_{11},$$
@@ -580,7 +584,7 @@ Let $\xi\in\Xns{121}(\Q)$. By \Cref{cor:integral} $\xi$ is not a cusp, and $\var
 
 \section{Computations}\label{sec:computations}
 
-All the computations were done in Magma V2.30-1 \cite{magma}, on the \textit{Mordell} server at the Department of Mathematics, University of Zagreb, which has an AMD EPYC 9175F processor with 16 cores (32 threads) and 384 GB of RAM. All of them can be rerun with the script \githubbare{run_all.sh}, in about $4$ minutes of wall time and $10$ minutes of CPU time (with at most $3$ Magma processes at a time). The longest computations are the Selmer groups for the odd classes ($2$ minutes for all $3$ classes at the $11$-adic precision of $160$ digits) and the supplementary checks below ($2$ minutes).
+All the computations were done in Magma V2.30-1 \cite{magma}, on the \textit{Mordell} server at the Department of Mathematics, University of Zagreb, which has an AMD EPYC 9175F processor with 16 cores (32 threads) and 384 GB of RAM. All of them can be rerun with the script \githubbare{run_all.sh}, which also checks that every computation reaches its success marker, in about $4$ minutes of wall time and $10$ minutes of CPU time (with at most $3$ Magma processes at a time). The longest computations are the Selmer groups for the odd classes ($2$ minutes for all $3$ classes at the $11$-adic precision of $160$ digits) and the supplementary checks below ($2$ minutes).
 
 The local computations at the primes above $11$ were done with $p$-adic precision $160$, and the Selmer groups for the odd classes also with precision $80$, with the same results. We use the image of a local element under the Kummer map only when we know it to relative precision at least $2v(11)+2$. This is enough, since $1+\varpi^{m}\OO_l\subseteq l^{\times 11}$ for $m>11v(11)/10$.
 

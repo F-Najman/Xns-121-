@@ -97,4 +97,4 @@ AMD EPYC 9175F, 16 cores (32 threads), 384 GB RAM, Magma V2.30-1.
 
 ## Paper
 
-`paper/` mirrors the Overleaf project (6ae89a4fa80c0605cd016185); edit it there. The links in the paper point to revision b0b88fd of this repository.
+`paper/` mirrors the Overleaf project (6ae89a4fa80c0605cd016185); edit it there. The links in the paper point to revision c12c8c3 of this repository.
