@@ -1,5 +1,6 @@
 Loading "code/original_jmap.m"
 Rank bounds: 1; generators: [ (4 : 5 : 1) ]
+MW_GROUP_VERIFIED: E(Q) = Z*G, G = (4 : 5 : 1)
 Compact numerator degrees: 27, 26
 CM points (n, coordinates, j, CM discriminant):
 -2 (2 : -1 : 1) -12288000 -27

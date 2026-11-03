@@ -3,7 +3,16 @@ load "code/original_jmap.m";
 Q := Rationals();
 E := EllipticCurve([Q|0,-1,1,-7,10]);
 G := E![4,5];
-printf "Rank bounds: %o; generators: %o\n", RankBounds(E), Generators(E);
+// Section 3: E(Q) = Z*G with G = (4,5).
+r1, r2 := RankBounds(E);
+assert r1 eq 1 and r2 eq 1;
+assert #TorsionSubgroup(E) eq 1;
+MW, mw, rkproved, genproved := MordellWeilGroup(E);
+assert rkproved and genproved;
+assert Invariants(MW) eq [0];
+assert G eq mw(MW.1) or G eq -mw(MW.1);
+printf "Rank bounds: %o; generators: %o\n", r1, [mw(MW.1)];
+printf "MW_GROUP_VERIFIED: E(Q) = Z*G, G = %o\n", G;
 K<x> := RationalFunctionField(Q);
 R<Y> := PolynomialRing(K);
 F<y> := FunctionField(Y^2+Y-x^3+x^2+7*x-10);

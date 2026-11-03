@@ -24,28 +24,29 @@ Numbering follows the paper. Each script `assert`s its claims and prints a marke
 
 | Paper | Claim | Script | Log / marker |
 |---|---|---|---|
+| Sect. 3 | `E(Q) = Z·G` with `G = (4,5)` (rank 1, trivial torsion, generators proved by Magma) | `code/model.m` | `logs/model.log` (`MW_GROUP_VERIFIED`) |
 | Prop. 3.1 a) | `j` has degree 55 with poles of order 11 at the 5 cusps; `div(u) = Σ cusps − 5(O)` | `code/model.m` | `logs/model.log` (`AUDIT_DONE`) |
 | Prop. 3.1 a) | the cusps are `rs`, `r ∈ {1,3,4,5,9}`, with `s` of order 11 | `code/sieve_bruteforce.m` | `logs/sieve_bruteforce.log` (`CUSPS_OK`) |
-| Prop. 3.1 b) | `(A+By)(c)` is a unit away from 11 for every cusp `c` | `code/sieve_bruteforce.m` | `M2` |
+| Prop. 3.1 b) | `(A+By)(rs)` is a unit away from 11 for every `r ∈ R` (the paper writes `𝒜`, `ℬ` for `A`, `B`) | `code/sieve_bruteforce.m` | `M2` |
 | Prop. 3.1 c), Table 1 | `j(nG)` for `n = −2..4` are the CM `j`-invariants (D inert at 11) | `code/model.m` | `logs/model.log` |
 | Prop. 3.1 c) | `nG` is the only rational point above `j(nG)` | `code/cm_lifts.m` | `logs/cm_lifts.log` (`C2`) |
 | Remark 3.2 | index 6655, 55 cusps, `ν2 = 67`, `ν3 = 1`, genus 511 | `code/genus.m` | `logs/genus.log` (`G1`) |
-| Lemma 3.3 | Frobenius elements excluding non-canonical lifts (p = 7, 5, 7, 5, 7, 17, 41) | `code/cm_lifts.m` | `C1` |
-| Prop. 4.6 | six-prime sieve: `n ≡ n0 (mod 4356)`, `n0 ∈ {−2..4}`, classes = those of `n0 G` | `code/sieve_bruteforce.m` | `SIEVE_BRUTEFORCE_VERIFIED` |
-| Remark 4.7 | without Lemma 4.5 b) ten residue classes survive | `code/sieve_bruteforce.m` with `CONSERVATIVE_O:=1` | `logs/sieve_bruteforce_conservative.log` |
-| Cor. 4.8 | function-field identity `(x(P−3s)−α)/(x(3s)−α) = f1^7 f2^10 f3^6 fT^3 h^11` | `code/setup.m` | `logs/setup.log` (`SETUP_DONE`) |
-| Sect. 5 | `L`, `θ`, `β`, `η`, `v_{n0}`, the genus 5 curves, `F`, `B`, discriminants, ideal of `a` | `code/setup.m` | `SETUP_DONE` |
+| Lemma 3.4 (with Lemma 3.3) | Frobenius elements `g` with `g^(5·#O^×) ≠ 1` excluding non-canonical lifts (p = 7, 5, 7, 5, 7, 17, 41) | `code/cm_lifts.m` | `C1` |
+| Prop. 4.7 | six-prime sieve: `n ≡ n0 (mod 4356)`, `n0 ∈ {−2..4}`, classes = those of `n0 G` | `code/sieve_bruteforce.m` | `SIEVE_BRUTEFORCE_VERIFIED` |
+| Remark 4.8 | without Lemma 4.6 b) ten residue classes survive | `code/sieve_bruteforce.m` with `CONSERVATIVE_O:=1` | `logs/sieve_bruteforce_conservative.log` |
+| Cor. 4.9 | function-field identity `(x(P−3s)−α)/(x(3s)−α) = f1^7 f2^10 f3^6 fT^3 h^11` | `code/setup.m` | `logs/setup.log` (`SETUP_DONE`) |
+| Sect. 5 | `L`, `θ`, `β`, `η`, `ρ_{n0}`, the genus 5 curves, `F`, `B`, discriminants, ideal of `a` | `code/setup.m` | `SETUP_DONE` |
 | Sect. 5 | primes of `B` above 2 and 11; `v(4−θ) = 5, 5, 10` at the primes above 11 | `code/odd_selmer.m`, `code/single_place.m` | `logs/odd_selmer_p160.log`, `logs/single_place.log` |
-| Lemma 7.1 | `Cl(F)[11] = Cl(B)[11] = 0` (Odlyzko, Table 4, b = 9) | `code/class_groups.m` | `logs/class_groups.log` |
-| Prop. 7.2 a) | odd classes: 15-dim. basis of `B(S,11)^−`, local images of dim. 5, `dim 𝒮 = 1`, spanned by the known point | `code/odd_selmer.m` | `logs/odd_selmer_p160.log`, `logs/odd_selmer_p80.log` (`ODD_SELMER_UPPER_BOUND`) |
-| Prop. 7.2 b) | `d_v ≠ 0`, `d_v ∈ W_v` | `code/odd_directions.m` (run after `odd_selmer.m`) | `ODD_FORMAL_DIRECTION` |
-| Prop. 7.2 b) | `d_v ∉ loc_w(𝒮)` at each of the two primes with `v(4−θ)` odd | `code/single_place.m` | `O3` |
-| Prop. 7.3 a) | even classes: basis of `F(S,11)` (dim. 19), local images of dim. 6, `dim 𝒮 = 5,5,4,4` | `code/even_selmer.m` (`NN:=−2,0,2,4`) | `logs/even_selmer_{-2,0,2,4}.log` (`E1`–`E4`) |
-| Prop. 7.3 b) | injectivity of `loc_v`, `κ_v ∉ ⟨μ(T)⟩`, `loc_v(𝒮) ∩ (⟨κ_v⟩+⟨μ(T)⟩) = ⟨μ(T)⟩` | `code/single_place.m` | `E5` |
-| Remark 7.4 | the condition at 2 changes nothing; the third prime above 11 fails for `n0 = 2` | `code/even_selmer.m`, `code/single_place.m` | `E3`, `THIRD_PLACE` |
+| Lemma 7.1 a) | `Cl(F)[11] = Cl(B)[11] = 0` (Odlyzko, Table 4, b = 9) | `code/class_groups.m` | `logs/class_groups.log` |
+| Prop. 7.3 a) | odd classes: 15-dim. basis of `B(S,11)^−`, local images of dim. 5, `dim 𝒮 = 1`, spanned by the known point | `code/odd_selmer.m` | `logs/odd_selmer_p160.log`, `logs/odd_selmer_p80.log` (`ODD_SELMER_UPPER_BOUND`) |
+| Prop. 7.3 b) | `κ_v^- ≠ 0`, `κ_v^- ∈ W_v` | `code/odd_directions.m` (run after `odd_selmer.m`) | `ODD_FORMAL_DIRECTION` |
+| Prop. 7.3 b) | `κ_v^- ∉ loc_ṽ(𝒮)` at each of the two primes with `v(4−θ)` odd | `code/single_place.m` | `O3` |
+| Prop. 7.4 a) | even classes: basis of `F(S,11)` (dim. 19), local images of dim. 6, `dim 𝒮 = 5,5,4,4` | `code/even_selmer.m` (`NN:=−2,0,2,4`) | `logs/even_selmer_{-2,0,2,4}.log` (`E1`–`E4`) |
+| Prop. 7.4 b) | injectivity of `loc_v`, `κ_v ∉ ⟨μ(T)⟩`, `loc_v(𝒮) ∩ (⟨κ_v⟩+⟨μ(T)⟩) = ⟨μ(T)⟩` | `code/single_place.m` | `E5` |
+| Remark 7.5 | the condition at 2 changes nothing; the third prime above 11 fails for `n0 = 2` | `code/even_selmer.m`, `code/single_place.m` | `E3`, `THIRD_PLACE` |
 | Lemma 8.1 | `v(x'(q0)) = v(y'(q0)) = 1`, `v(δ) = 2` (odd); `v(x(q0)−4) = 2`, `v(y(q0)+1/2) = 3`, `v(δ) = 2`, `t'(2G) = 4(2−z)` (even) | `code/odd_geometry.m`, `code/even_geometry.m` | `ODD_DEPTH_AND_BRANCH_INPUTS_VERIFIED`, `EVEN_BRANCH_FORMAL_INPUTS_VERIFIED` |
-| Prop. 8.2 | `a ≡ −1`, `v_l(Y(P0)) = 1` at the ramified primes | `code/odd_singular_reduction.m` | `ODD_SINGULAR_REDUCTION_VERIFIED` |
-| Prop. 9.1, Lemma 6.3 a) | `a ≡ 8`, `Y(P0)` a unit, `11/π^10 ≡ −1`, expansions at the five sections, `Σ ℓ_{j−1} 8^{j−1}/j = 5` | `code/even_geometry.m` | `EVEN_BRANCH_FORMAL_INPUTS_VERIFIED` |
+| Prop. 8.4 | `a ≡ −1`, `v_l(Y(P0)) = 1` at the ramified primes | `code/odd_singular_reduction.m` | `ODD_SINGULAR_REDUCTION_VERIFIED` |
+| Prop. 9.3, Lemma 6.3 a) | `a ≡ 8`, `Y(P0)` a unit, `11/π^10 ≡ −1`, expansions at the five sections, `Σ ℓ_{j−1} 8^{j−1}/j = 5` | `code/even_geometry.m` | `EVEN_BRANCH_FORMAL_INPUTS_VERIFIED` |
 | Sect. 11 (suppl.) | depth and leading vectors for `n = n0 + 4356`, `n0 + 11·4356` | `code/odd_depth_examples.m` | `ALL_ODD_LOCAL_DEPTH_EXAMPLES_VERIFIED` |
 | Sect. 11 (suppl.) | `[P0 − ∞]` has infinite order | `code/nontorsion.m` | `ALL_SEVEN_KNOWN_DIVISORS_HAVE_INFINITE_ORDER` |
 
