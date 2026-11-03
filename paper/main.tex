@@ -522,7 +522,7 @@ Let $x\in\Xns{121}(\Q)$. By \Cref{cor:integral} $x$ is not a cusp, and $\pi(x)=n
 
 \section{Computations}\label{sec:computations}
 
-All the computations were done in Magma V2.30-1 \cite{magma}, on the \textit{Mordell} server at the Department of Mathematics, University of Zagreb, which has an AMD EPYC 9175F processor with 32 cores and 376 GB of RAM. The script \githubbare{run_all.sh} reruns all of them in about $4$ minutes of wall time and $10$ minutes of CPU time (using at most $3$ cores). The longest computations are the Selmer groups for the odd classes ($2$ minutes for all $3$ classes at the $11$-adic precision of $160$ digits) and the supplementary checks below ($2$ minutes).
+All the computations were done in Magma V2.30-1 \cite{magma}, on the \textit{Mordell} server at the Department of Mathematics, University of Zagreb, which has an AMD EPYC 9175F processor with 16 cores (32 threads) and 384 GB of RAM. The script \githubbare{run_all.sh} reruns all of them in about $4$ minutes of wall time and $10$ minutes of CPU time (using at most $3$ cores). The longest computations are the Selmer groups for the odd classes ($2$ minutes for all $3$ classes at the $11$-adic precision of $160$ digits) and the supplementary checks below ($2$ minutes).
 
 The local computations at the primes above $11$ were done with $p$-adic precision $160$, and the Selmer groups for the odd classes also with precision $80$, with the same results. We use the image of a local element under the Kummer map only when we know it to relative precision at least $2v(11)+2$. This is enough, since $1+\varpi^{m}\OO_l\subseteq l^{\times 11}$ for $m>11v(11)/10$.
 

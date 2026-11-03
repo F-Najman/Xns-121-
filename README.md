@@ -89,7 +89,7 @@ unconditional.
 ## Hardware
 
 All the computations ran on the *Mordell* server, Department of Mathematics, University of Zagreb:
-AMD EPYC 9175F, 32 cores, 376 GB RAM, Magma V2.30-1.
+AMD EPYC 9175F, 16 cores (32 threads), 384 GB RAM, Magma V2.30-1.
 
 ## Paper
 
