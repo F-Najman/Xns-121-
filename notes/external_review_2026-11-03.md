@@ -20,8 +20,10 @@ the odd Selmer groups remain replayed only.
    - Furio–Lombardo is published: Proc. Lond. Math. Soc. (3) 133 (2026), no. 2, e70193,
      doi:10.1112/plms.70193 (Crossref, August 2026). The bib entry is updated. One web-search
      summary claimed Proc. Roy. Soc. Edinburgh; Crossref contradicts it, so it is wrong.
-   - The intro now says that only `X_ns^+(25)` remains undetermined (at least to our knowledge),
-     with a `% TODO (author)` comment.
+   - The intro now says that this leaves only `X_ns^+(25)`, and that Eray Karabıyık has determined
+     its rational points (private communication). The author supplied this information on
+     3 November 2026. No public preprint was found: the only recent arXiv paper by (Emir) Eray
+     Karabıyık is arXiv:2609.03946, on `SL_2(F_13)` and `SL_2(F_19)` as Galois groups.
    - No public paper on `X_ns^+(25)` was found. The arXiv API title search was run on
      3 November 2026. The reviewer's "companion paper" is presumably the author's own level-25
      work in `~/Documents/Codex/2026-10-27/can-you-review-the-xns-25/`; whether to cite it is the
