@@ -4,6 +4,7 @@
 \usepackage{amssymb,amsmath,amsthm}
 \usepackage{booktabs}
 \usepackage[colorlinks=true,linkcolor=blue,citecolor=blue,urlcolor=blue]{hyperref}
+\usepackage{aliascnt}
 \usepackage{cleveref}
 
 \DeclareMathOperator{\Gal}{Gal}
@@ -42,11 +43,14 @@
 \newcommand{\githubbare}[1]{\href{https://github.com/F-Najman/Xns-121-/blob/\repocommit/#1}{\path{#1}}}
 
 \newtheorem{theorem}{Theorem}[section]
-\newtheorem{lemma}[theorem]{Lemma}
-\newtheorem{proposition}[theorem]{Proposition}
-\newtheorem{corollary}[theorem]{Corollary}
+% Each environment has its own counter, an alias of the theorem counter, so that
+% cleveref names the references correctly also with recent LaTeX (TeX Live 2025).
+\newcommand{\sharedtheorem}[2]{\newaliascnt{#1}{theorem}\newtheorem{#1}[#1]{#2}\aliascntresetthe{#1}}
+\sharedtheorem{lemma}{Lemma}
+\sharedtheorem{proposition}{Proposition}
+\sharedtheorem{corollary}{Corollary}
 \theoremstyle{definition}
-\newtheorem{remark}[theorem]{Remark}
+\sharedtheorem{remark}{Remark}
 \numberwithin{equation}{section}
 
 \title[Rational points on $\Xns{121}$]{Rational points on the non-split Cartan modular curve of level $121$}
