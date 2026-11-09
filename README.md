@@ -2,7 +2,8 @@
 
 Code, logs and certificates for the paper
 
-> F. Najman, *Rational points on the non-split Cartan modular curve of level 121* (2026).
+> S. Arango-Piñeros, F. Najman and D. Zureick-Brown, *Rational points on the non-split Cartan
+> modular curve of level 121* (2026).
 
 **Main result:** `X_ns^+(121)(Q)` consists of exactly 7 points. All of them are CM points, with
 discriminants −3, −4, −12, −16, −27, −67 and −163.
